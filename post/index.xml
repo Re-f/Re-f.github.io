@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-      <title>Recent Content on Erica On The Way </title>
+      <title>Posts on Erica On The Way </title>
       <generator uri="https://hugo.spf13.com">Hugo</generator>
-    <link>http://erica-zhou.github.io/index.xml/</link>
+    <link>http://erica-zhou.github.io/post/index.xml/</link>
     <language>zh-cn</language>
     <author>Erica Zhou</author>
     <copyright>Copyright (c) 2008 - 2015, Erica Zhou; all rights reserved.</copyright>
