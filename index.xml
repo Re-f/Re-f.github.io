@@ -10,16 +10,26 @@
     <updated>Sun, 25 Jan 2015 19:13:59 CST</updated>
     
     <item>
-      <title>Hellow world !</title>
-      <link>http://erica-zhou.github.io/post/Hellow-world/</link>
+      <title>关于我</title>
+      <link>http://erica-zhou.github.io/me/</link>
       <pubDate>Sun, 25 Jan 2015 19:13:59 CST</pubDate>
       <author>Erica Zhou</author>
-      <guid>http://erica-zhou.github.io/post/Hellow-world/</guid>
+      <guid>http://erica-zhou.github.io/me/</guid>
+      <description>&lt;p&gt;一个在魔都工作的女程序员，懒了24年终于在本命决定开始努力！&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Hello world !</title>
+      <link>http://erica-zhou.github.io/post/Hello-world/</link>
+      <pubDate>Sun, 25 Jan 2015 19:13:59 CST</pubDate>
+      <author>Erica Zhou</author>
+      <guid>http://erica-zhou.github.io/post/Hello-world/</guid>
       <description>
 
-&lt;h1 id=&#34;toc_0&#34;&gt;Hello&lt;/h1&gt;
+&lt;h1 id=&#34;toc_0&#34;&gt;Hello world !&lt;/h1&gt;
 
-&lt;h1 id=&#34;toc_1&#34;&gt;world&lt;/h1&gt;
+&lt;h1 id=&#34;toc_1&#34;&gt;Welcome!&lt;/h1&gt;
 </description>
     </item>
     
