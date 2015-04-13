@@ -1,25 +1,26 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-      <title>Hello on Erica On The Way </title>
-      <generator uri="https://hugo.spf13.com">Hugo</generator>
-    <link>http://erica-zhou.github.io/tags/hello/index.xml/</link>
+    <title>Hello on Erica On The Way</title>
+    <link>http://erica-zhou.github.io/tags/hello/</link>
+    <description>Recent content in Hello on Erica On The Way</description>
+    <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <author>Erica Zhou</author>
     <copyright>Copyright (c) 2008 - 2015, Erica Zhou; all rights reserved.</copyright>
-    <updated>Sun, 25 Jan 2015 19:13:59 CST</updated>
+    <lastBuildDate>Sun, 25 Jan 2015 19:13:59 +0800</lastBuildDate>
+    <atom:link href="http://erica-zhou.github.io/tags/hello/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Hello world !</title>
-      <link>http://erica-zhou.github.io/post/Hello-world/</link>
-      <pubDate>Sun, 25 Jan 2015 19:13:59 CST</pubDate>
-      <author>Erica Zhou</author>
-      <guid>http://erica-zhou.github.io/post/Hello-world/</guid>
+      <link>http://erica-zhou.github.io/post/hello-world/</link>
+      <pubDate>Sun, 25 Jan 2015 19:13:59 +0800</pubDate>
+      
+      <guid>http://erica-zhou.github.io/post/hello-world/</guid>
       <description>
 
-&lt;h1 id=&#34;toc_0&#34;&gt;Hello world !&lt;/h1&gt;
+&lt;h1 id=&#34;hello-world:aa77bbfd89a7b0ff10def205b9c08d51&#34;&gt;Hello world !&lt;/h1&gt;
 
-&lt;h1 id=&#34;toc_1&#34;&gt;Welcome!&lt;/h1&gt;
+&lt;h1 id=&#34;welcome:aa77bbfd89a7b0ff10def205b9c08d51&#34;&gt;Welcome!&lt;/h1&gt;
 </description>
     </item>
     
