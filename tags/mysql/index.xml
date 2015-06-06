@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Mysql on Erica On The Way</title>
+    <link>http://localhost:1313/tags/mysql/</link>
+    <description>Recent content in Mysql on Erica On The Way</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>Copyright (c) 2008 - 2015, Erica Zhou; all rights reserved.</copyright>
+    <lastBuildDate>Sat, 06 Jun 2015 11:10:08 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/mysql/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>MySQL调整参数:open_files_limit &amp; max_connections &amp; table_open_cache</title>
+      <link>http://localhost:1313/posts/mysql_variables/</link>
+      <pubDate>Sat, 06 Jun 2015 11:10:08 +0800</pubDate>
+      
+      <guid>http://localhost:1313/posts/mysql_variables/</guid>
+      <description>
+
+&lt;h2 id=&#34;起因:ff1a89ac228b92df24d68eae2d0babea&#34;&gt;起因&lt;/h2&gt;
+
+&lt;p&gt;非root用户运行MySQL，当MySQL配置比较高时，MySQL运行中生效的参数值与配置的值不一样,所以具体分析一下MySQL是怎么调整这些参数值的。
+所以这篇文章的目的是为了说明在系统资源不够的情况下，MySQL 是怎么调整者三个参数的&lt;/p&gt;
+
+&lt;h3 id=&#34;说明:ff1a89ac228b92df24d68eae2d0babea&#34;&gt;说明&lt;/h3&gt;
+
+&lt;p&gt;此文涉及到3个参数open_files_limit &amp;amp; max_connections &amp;amp; table_open_cache，这3个参数与系统相关的资源是最多能同时打开的文件（ulimit -n 查看）实际即文件描述符（fd）。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;系统参数与文件描述符的关系&lt;/strong&gt;
+- max_connection &amp;amp; fd : 每一个MySQL connection都需要一个文件描述符
+- table_open_cache &amp;amp;  fd 打开一张表至少需要一个文件描述符，如打开MyISAM需要两个fd&lt;/p&gt;
+
+&lt;h2 id=&#34;mysql调整参数的方式:ff1a89ac228b92df24d68eae2d0babea&#34;&gt;MySQL调整参数的方式&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;根据配置(配置的3个参数值或默认值)计算&lt;code&gt;request_open_files(需要的文件描述符)&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;获取有效的系统的限制值&lt;code&gt;effective_open_files&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;根据&lt;code&gt;effective_open_files&lt;/code&gt;调整&lt;code&gt;request_open_files&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;根据调整后的&lt;code&gt;request_open_files&lt;/code&gt;,计算实际生效的参数值(show variables 查看到的3个参数值)&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&#34;计算-request-open-files:ff1a89ac228b92df24d68eae2d0babea&#34;&gt;计算&lt;code&gt;request_open_files&lt;/code&gt;&lt;/h3&gt;
+
+&lt;p&gt;&lt;code&gt;request_open_files&lt;/code&gt;有三个计算公式&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;    // 最大连接数+同时打开的表的最大数量+其他（各种日志等等）
+      limit_1= max_connections + table_cache_size * 2 + 10;
+    
+     //假设平均每个连接打开的表的数量（2-4）
+     //源码中是这么写的：
+     //We are trying to allocate no less than  
+     //	max_connections*5 file handles 
+      limit_2= max_connections * 5;
+    
+      //mysql 默认的最低值是5000
+      limit_3= open_files_limit ? open_files_limit : 5000;
+
+所以open_files_limit期待的最低 
+    request_open_files= max(limit_1, limit_2,limit_3);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;计算-effective-open-files:ff1a89ac228b92df24d68eae2d0babea&#34;&gt;计算&lt;code&gt;effective_open_files&lt;/code&gt;:&lt;/h3&gt;
+
+&lt;p&gt;MySQL 的思路：
+在&lt;strong&gt;有限值&lt;/strong&gt;的的范围内MySQL &lt;strong&gt;尽量&lt;/strong&gt;将&lt;code&gt;effective_open_files&lt;/code&gt;的值设大&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;media/2.png&#34; alt=&#34;ddd&#34; /&gt;
+&lt;/p&gt;
+
+&lt;h3 id=&#34;修正request-open-files:ff1a89ac228b92df24d68eae2d0babea&#34;&gt;修正request_open_files&lt;/h3&gt;
+
+&lt;p&gt;&lt;code&gt;requested_open_files&lt;/code&gt;= min(&lt;code&gt;effective_open_files&lt;/code&gt;, &lt;code&gt;request_open_files&lt;/code&gt;);&lt;/p&gt;
+
+&lt;h3 id=&#34;重新计算参数值:ff1a89ac228b92df24d68eae2d0babea&#34;&gt;重新计算参数值&lt;/h3&gt;
+
+&lt;h3 id=&#34;修正open-files-limit:ff1a89ac228b92df24d68eae2d0babea&#34;&gt;修正open_files_limit&lt;/h3&gt;
+
+&lt;p&gt;&lt;code&gt;open_files_limit&lt;/code&gt; = &lt;code&gt;effective_open_files&lt;/code&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;修正max-connections:ff1a89ac228b92df24d68eae2d0babea&#34;&gt;修正max_connections&lt;/h3&gt;
+
+&lt;p&gt;max_connections 根据 request_open_files 来做修正。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;limit = requested_open_files - 10 - TABLE_OPEN_CACHE_MIN * 2;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;如果配置的max_connections值大于limit，则将 max_connections 的值修正为limit&lt;/li&gt;
+&lt;li&gt;其他情况下 max_connections 保留配置值&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;修正table-cache-size:ff1a89ac228b92df24d68eae2d0babea&#34;&gt;修正table_cache_size&lt;/h3&gt;
+
+&lt;p&gt;table_cache_size 会根据 request_open_files 来做修正&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;// mysql table_cache_size 最小值，400
+limit1 = TABLE_OPEN_CACHE_MIN 
+// 根据 requested_open_files 计算
+limit2 = (requested_open_files - 10 - max_connections) / 2
+limit = max(limit1,limt2);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;如果配置的 table_cache_size 值大于limit，则将 table_cache_size 的值修正为limit&lt;/li&gt;
+&lt;li&gt;其他情况下 table_cache_size 保留配置值&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;举例:ff1a89ac228b92df24d68eae2d0babea&#34;&gt;举例&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;以下用例全部在非 root 用户下运行&lt;/strong&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;ul&gt;
+&lt;li&gt;系统资源不够且无法调整&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code&gt;参数设置：
+
+//mysql
+	max_connections = 1000
+//ulimit -n 
+	1024
+
+生效的值：
+
+open_files_limit = 1024
+max_connections = 1024 - 10 - 800 = 214
+table_open_cache = ( 1024 - 10 - 214) / 2 = 400
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;hr /&gt;
+
+&lt;ul&gt;
+&lt;li&gt;系统资源不够可以调整&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code&gt;参数设置：
+
+//mysql
+	max_connections = 1000
+//ulimit -S -n 
+	1000
+//ulimit -H -n 
+	65535
+
+生效的值：
+
+open_files_limit = 65535
+max_connections = 1000
+table_open_cache = ( 1024 - 10 - 214) / 2 = 400
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;mysql 修改 open_files_limit&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;参数设置：
+
+//mysql
+	max_connections = 1000
+	max_connections = 1000
+//ulimit -n 
+	65535
+
+生效的值：
+
+open_files_limit = 65535
+max_connections = 1000
+table_open_cache = 2000
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;附注:ff1a89ac228b92df24d68eae2d0babea&#34;&gt;附注&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.sudops.com/mysql-open-file-limit-max_connections-table-open-cache.htmlz&#34;&gt;1&lt;/a&gt; . 非root用户，只能设置Hard limit之内的值，root用户可以设置hard limit的值
+[2] .&lt;a href=&#34;http://www.sudops.com/mysql-open-file-limit-max_connections-table-open-cache.htmlz&#34;&gt;参考文章&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
