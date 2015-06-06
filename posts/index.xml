@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Erica On The Way</title>
-    <link>http://localhost:1313/posts/</link>
+    <link>http://erica-zhou.github.io/posts/</link>
     <description>Recent content in Posts on Erica On The Way</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <copyright>Copyright (c) 2008 - 2015, Erica Zhou; all rights reserved.</copyright>
     <lastBuildDate>Sat, 06 Jun 2015 11:10:08 +0800</lastBuildDate>
-    <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://erica-zhou.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>MySQL调整参数:open_files_limit &amp; max_connections &amp; table_open_cache</title>
-      <link>http://localhost:1313/posts/mysql_variables/</link>
+      <link>http://erica-zhou.github.io/posts/mysql_variables/</link>
       <pubDate>Sat, 06 Jun 2015 11:10:08 +0800</pubDate>
       
-      <guid>http://localhost:1313/posts/mysql_variables/</guid>
+      <guid>http://erica-zhou.github.io/posts/mysql_variables/</guid>
       <description>
 
 &lt;h2 id=&#34;起因:ff1a89ac228b92df24d68eae2d0babea&#34;&gt;起因&lt;/h2&gt;
@@ -180,10 +180,10 @@ table_open_cache = 2000
     
     <item>
       <title>Hello world !</title>
-      <link>http://localhost:1313/posts/hello-world/</link>
+      <link>http://erica-zhou.github.io/posts/Hello%20world%21%21%21/</link>
       <pubDate>Sun, 25 Jan 2015 19:13:59 +0800</pubDate>
       
-      <guid>http://localhost:1313/posts/hello-world/</guid>
+      <guid>http://erica-zhou.github.io/posts/Hello%20world%21%21%21/</guid>
       <description>
 
 &lt;h1 id=&#34;hello-world:aa77bbfd89a7b0ff10def205b9c08d51&#34;&gt;Hello world !&lt;/h1&gt;
