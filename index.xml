@@ -18,10 +18,6 @@
       <guid>http://erica-zhou.github.io/posts/put_up_dev_env/</guid>
       <description>
 
-&lt;h1 id=&#34;利用-git-hook-搭建自动编译部署测试环境:62a450c8c89780770128cbd5f887c201&#34;&gt;利用 git hook 搭建自动编译部署测试环境&lt;/h1&gt;
-
-&lt;p&gt;@(Inbox)[golang|开发环境|工程]&lt;/p&gt;
-
 &lt;h3 id=&#34;说明:62a450c8c89780770128cbd5f887c201&#34;&gt;说明：&lt;/h3&gt;
 
 &lt;p&gt;利用 docker，git 搭建自动编译部署测试环境
