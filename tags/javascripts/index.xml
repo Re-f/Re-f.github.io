@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Javascripts on Erica On The Way</title>
+    <link>http://erica-zhou.github.io/tags/javascripts/</link>
+    <description>Recent content in Javascripts on Erica On The Way</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>Copyright (c) 2008 - 2015, Erica Zhou; all rights reserved.</copyright>
+    <lastBuildDate>Sat, 05 Sep 2015 17:11:21 +0800</lastBuildDate>
+    <atom:link href="http://erica-zhou.github.io/tags/javascripts/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>js 函数与其它语言的差异</title>
+      <link>http://erica-zhou.github.io/posts/js_function/</link>
+      <pubDate>Sat, 05 Sep 2015 17:11:21 +0800</pubDate>
+      
+      <guid>http://erica-zhou.github.io/posts/js_function/</guid>
+      <description>&lt;p&gt;跟 go 相比，js 符合函数是第一对象的这个特性&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

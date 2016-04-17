@@ -75,17 +75,16 @@
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;http://www.tuicool.com/articles/3QRB7jU&#34;&gt;在测试服务器上建立代码的远程仓库&amp;amp;代码仓库&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;http://git-scm.com/docs/githooks&#34;&gt;添加 post_recieve hook&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;container 中安装 ssh：&lt;/li&gt;
-&lt;/ul&gt;
+
+&lt;li&gt;&lt;p&gt;container 中安装 ssh：&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;	$ yum install openssh-server 
 	$ echo root:sshpass | chpasswd
 	$ sed &#39;s@session\s*required\s*pam_loginuid.so@session optional 	pam_loginuid.so@g&#39; -i /etc/pam.d/sshd
 	$ /etc/init.d/sshd start
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
 
-&lt;ul&gt;
-&lt;li&gt;将&lt;code&gt;ci_server&lt;/code&gt;的ssh端口（22）映射的宿主机时，一般无法映射到相同的22端口上，因此开发机的本地仓库添加&lt;code&gt;ci_server&lt;/code&gt;远端仓库时，需要指定端口号，方法如下： &lt;code&gt;ssh://git@github.com:22/asdf/asdf.git&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;将&lt;code&gt;ci_server&lt;/code&gt;的ssh端口（22）映射的宿主机时，一般无法映射到相同的22端口上，因此开发机的本地仓库添加&lt;code&gt;ci_server&lt;/code&gt;远端仓库时，需要指定端口号，方法如下： &lt;code&gt;ssh://git@github.com:22/asdf/asdf.git&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </description>
     </item>

@@ -65,8 +65,7 @@
 &lt;p&gt;MySQL 的思路：
 在&lt;strong&gt;有限值&lt;/strong&gt;的的范围内MySQL &lt;strong&gt;尽量&lt;/strong&gt;将&lt;code&gt;effective_open_files&lt;/code&gt;的值设大&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;media/2.png&#34; alt=&#34;ddd&#34; /&gt;
-&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;media/2.png&#34; alt=&#34;ddd&#34; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&#34;修正request-open-files:ff1a89ac228b92df24d68eae2d0babea&#34;&gt;修正request_open_files&lt;/h3&gt;
 
@@ -113,63 +112,61 @@ limit = max(limit1,limt2);
 &lt;hr /&gt;
 
 &lt;ul&gt;
-&lt;li&gt;系统资源不够且无法调整&lt;/li&gt;
+&lt;li&gt;系统资源不够且无法调整
+```
+参数设置：&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;pre&gt;&lt;code&gt;参数设置：
-
-//mysql
+&lt;p&gt;//mysql
 	max_connections = 1000
-//ulimit -n 
-	1024
+//ulimit -n
+	1024&lt;/p&gt;
 
-生效的值：
+&lt;p&gt;生效的值：&lt;/p&gt;
 
-open_files_limit = 1024
+&lt;p&gt;open_files_limit = 1024
 max_connections = 1024 - 10 - 800 = 214
-table_open_cache = ( 1024 - 10 - 214) / 2 = 400
+table_open_cache = ( 1024 - 10 - 214) / 2 = 400&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;
+---
+- 系统资源不够可以调整
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;hr /&gt;
+&lt;p&gt;参数设置：&lt;/p&gt;
 
-&lt;ul&gt;
-&lt;li&gt;系统资源不够可以调整&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;pre&gt;&lt;code&gt;参数设置：
-
-//mysql
+&lt;p&gt;//mysql
 	max_connections = 1000
-//ulimit -S -n 
+//ulimit -S -n
 	1000
-//ulimit -H -n 
-	65535
+//ulimit -H -n
+	65535&lt;/p&gt;
 
-生效的值：
+&lt;p&gt;生效的值：&lt;/p&gt;
 
-open_files_limit = 65535
+&lt;p&gt;open_files_limit = 65535
 max_connections = 1000
-table_open_cache = ( 1024 - 10 - 214) / 2 = 400
+table_open_cache = ( 1024 - 10 - 214) / 2 = 400&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;
+---
+mysql 修改 open_files_limit
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;hr /&gt;
+&lt;p&gt;参数设置：&lt;/p&gt;
 
-&lt;p&gt;mysql 修改 open_files_limit&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;参数设置：
-
-//mysql
+&lt;p&gt;//mysql
 	max_connections = 1000
 	max_connections = 1000
-//ulimit -n 
-	65535
+//ulimit -n
+	65535&lt;/p&gt;
 
-生效的值：
+&lt;p&gt;生效的值：&lt;/p&gt;
 
-open_files_limit = 65535
+&lt;p&gt;open_files_limit = 65535
 max_connections = 1000
 table_open_cache = 2000
-&lt;/code&gt;&lt;/pre&gt;
+```&lt;/p&gt;
 
 &lt;h2 id=&#34;其它:ff1a89ac228b92df24d68eae2d0babea&#34;&gt;其它&lt;/h2&gt;
 

@@ -43,11 +43,11 @@
 <meta name="twitter:creator" content="@erica_luo">
 <meta name="twitter:description" content="">
 <meta name="twitter:image:src" content="">
-<meta name="twitter:domain" content="spf13.com">
+<meta name="twitter:domain" content="xigu.com">
 
 
 
-    <base href="http://erica-zhou.github.io/">
+    <base href="http://erica-zhou.github.io">
     <title> 利用 git hook 搭建自动编译部署测试环境</title>
     <link rel="canonical" href="http://erica-zhou.github.io/posts/put_up_dev_env/">
     
@@ -86,9 +86,9 @@
             </a>
             </li>
            <br/> <li>
-            <a href="/presentation/">
+            <a href="/Tsukkomi/">
                 <span class="icon"> <i aria-hidden="true" class="icon-pencil"></i></span>
-                <span> 记录 </span>
+                <span> 吐个小槽 </span>
             </a>
             </li>
            
@@ -220,17 +220,16 @@
 <ul>
 <li><a href="http://www.tuicool.com/articles/3QRB7jU">在测试服务器上建立代码的远程仓库&amp;代码仓库</a></li>
 <li><a href="http://git-scm.com/docs/githooks">添加 post_recieve hook</a></li>
-<li>container 中安装 ssh：</li>
-</ul>
+
+<li><p>container 中安装 ssh：</p>
 
 <pre><code>	$ yum install openssh-server 
 	$ echo root:sshpass | chpasswd
 	$ sed 's@session\s*required\s*pam_loginuid.so@session optional 	pam_loginuid.so@g' -i /etc/pam.d/sshd
 	$ /etc/init.d/sshd start
-</code></pre>
+</code></pre></li>
 
-<ul>
-<li>将<code>ci_server</code>的ssh端口（22）映射的宿主机时，一般无法映射到相同的22端口上，因此开发机的本地仓库添加<code>ci_server</code>远端仓库时，需要指定端口号，方法如下： <code>ssh://git@github.com:22/asdf/asdf.git</code></li>
+<li><p>将<code>ci_server</code>的ssh端口（22）映射的宿主机时，一般无法映射到相同的22端口上，因此开发机的本地仓库添加<code>ci_server</code>远端仓库时，需要指定端口号，方法如下： <code>ssh://git@github.com:22/asdf/asdf.git</code></p></li>
 </ul>
 
         </article>
@@ -296,17 +295,16 @@
 <ul>
 <li><a href="http://www.tuicool.com/articles/3QRB7jU">在测试服务器上建立代码的远程仓库&amp;代码仓库</a></li>
 <li><a href="http://git-scm.com/docs/githooks">添加 post_recieve hook</a></li>
-<li>container 中安装 ssh：</li>
-</ul>
+
+<li><p>container 中安装 ssh：</p>
 
 <pre><code>	$ yum install openssh-server 
 	$ echo root:sshpass | chpasswd
 	$ sed 's@session\s*required\s*pam_loginuid.so@session optional 	pam_loginuid.so@g' -i /etc/pam.d/sshd
 	$ /etc/init.d/sshd start
-</code></pre>
+</code></pre></li>
 
-<ul>
-<li>将<code>ci_server</code>的ssh端口（22）映射的宿主机时，一般无法映射到相同的22端口上，因此开发机的本地仓库添加<code>ci_server</code>远端仓库时，需要指定端口号，方法如下： <code>ssh://git@github.com:22/asdf/asdf.git</code></li>
+<li><p>将<code>ci_server</code>的ssh端口（22）映射的宿主机时，一般无法映射到相同的22端口上，因此开发机的本地仓库添加<code>ci_server</code>远端仓库时，需要指定端口号，方法如下： <code>ssh://git@github.com:22/asdf/asdf.git</code></p></li>
 </ul>
 
         </article>
@@ -338,27 +336,27 @@
         </section>
         <ul id="categories">
           
-            <li><a href="http://erica-zhou.github.io//topics/development">Development</a> </li>
+            <li><a href="http://erica-zhou.github.io/topics/development">Development</a> </li>
           
-            <li><a href="http://erica-zhou.github.io//topics/golang">golang</a> </li>
+            <li><a href="http://erica-zhou.github.io/topics/golang">golang</a> </li>
           
         </ul>
         <ul id="tags">
           
-            <li> <a href="http://erica-zhou.github.io//tags/golang">golang</a> </li>
+            <li> <a href="http://erica-zhou.github.io/tags/golang">golang</a> </li>
           
-            <li> <a href="http://erica-zhou.github.io//tags/development">development</a> </li>
+            <li> <a href="http://erica-zhou.github.io/tags/development">development</a> </li>
           
-            <li> <a href="http://erica-zhou.github.io//tags/environment">environment</a> </li>
+            <li> <a href="http://erica-zhou.github.io/tags/environment">environment</a> </li>
           
-            <li> <a href="http://erica-zhou.github.io//tags/engineering">engineering</a> </li>
+            <li> <a href="http://erica-zhou.github.io/tags/engineering">engineering</a> </li>
           
         </ul>
     </div>
 
     <div>
         <section id="prev">
-            &nbsp;
+            &nbsp;<a class="previous" href="http://erica-zhou.github.io/posts/js_function/"><i class="icon-arrow-left"></i> js 函数与其它语言的差异</a><br>
         </section><section id="next">
             &nbsp;<a class="next" href="http://erica-zhou.github.io/posts/mysql_variables/">MySQL调整参数:open_files_limit &amp; max_connections &amp; table_open_cache <i class="icon-arrow-right"></i></a>
         </section>
@@ -366,11 +364,10 @@
 
     <div>
         <section id="author">
-             <h4>关于作者:</h4> 
-                一名在魔都奋斗开发员，始终相信早时不作业，晚时不作息这句话，是<a
-                href="https://github.com/erica-zhou/tester-on-docker" target="_blank">tester-on-docker</a>的作者。
-                <br/> 可以通过 <a href="http://weibo.com/dongzouxigu" target="_blank">微博</a>,
-                <a href="http://github.com/erica-zhou" target="_blank">Github</a>或者<a href="mailto:zhou.erica.w@gmail.com">Gmail</a>联系作者。
+             <h4>关于作者:			 西顾~</h4> 
+			 
+              
+	 
         </section>
     </div>
 

@@ -41,11 +41,11 @@
 <meta name="twitter:creator" content="@erica_luo">
 <meta name="twitter:description" content="">
 <meta name="twitter:image:src" content="">
-<meta name="twitter:domain" content="spf13.com">
+<meta name="twitter:domain" content="xigu.com">
 
 
 
-    <base href="http://erica-zhou.github.io/">
+    <base href="http://erica-zhou.github.io">
     <title> MySQL调整参数:open_files_limit &amp; max_connections &amp; table_open_cache</title>
     <link rel="canonical" href="http://erica-zhou.github.io/posts/mysql_variables/">
     
@@ -84,9 +84,9 @@
             </a>
             </li>
            <br/> <li>
-            <a href="/presentation/">
+            <a href="/Tsukkomi/">
                 <span class="icon"> <i aria-hidden="true" class="icon-pencil"></i></span>
-                <span> 记录 </span>
+                <span> 吐个小槽 </span>
             </a>
             </li>
            
@@ -219,8 +219,7 @@
 <p>MySQL 的思路：
 在<strong>有限值</strong>的的范围内MySQL <strong>尽量</strong>将<code>effective_open_files</code>的值设大</p>
 
-<p><img src="media/2.png" alt="ddd" />
-</p>
+<p><img src="media/2.png" alt="ddd" /></p>
 
 <h3 id="修正request-open-files:ff1a89ac228b92df24d68eae2d0babea">修正request_open_files</h3>
 
@@ -267,63 +266,61 @@ limit = max(limit1,limt2);
 <hr />
 
 <ul>
-<li>系统资源不够且无法调整</li>
+<li>系统资源不够且无法调整
+```
+参数设置：</li>
 </ul>
 
-<pre><code>参数设置：
-
-//mysql
+<p>//mysql
 	max_connections = 1000
-//ulimit -n 
-	1024
+//ulimit -n
+	1024</p>
 
-生效的值：
+<p>生效的值：</p>
 
-open_files_limit = 1024
+<p>open_files_limit = 1024
 max_connections = 1024 - 10 - 800 = 214
-table_open_cache = ( 1024 - 10 - 214) / 2 = 400
+table_open_cache = ( 1024 - 10 - 214) / 2 = 400</p>
+
+<pre><code>
+---
+- 系统资源不够可以调整
 </code></pre>
 
-<hr />
+<p>参数设置：</p>
 
-<ul>
-<li>系统资源不够可以调整</li>
-</ul>
-
-<pre><code>参数设置：
-
-//mysql
+<p>//mysql
 	max_connections = 1000
-//ulimit -S -n 
+//ulimit -S -n
 	1000
-//ulimit -H -n 
-	65535
+//ulimit -H -n
+	65535</p>
 
-生效的值：
+<p>生效的值：</p>
 
-open_files_limit = 65535
+<p>open_files_limit = 65535
 max_connections = 1000
-table_open_cache = ( 1024 - 10 - 214) / 2 = 400
+table_open_cache = ( 1024 - 10 - 214) / 2 = 400</p>
+
+<pre><code>
+---
+mysql 修改 open_files_limit
 </code></pre>
 
-<hr />
+<p>参数设置：</p>
 
-<p>mysql 修改 open_files_limit</p>
-
-<pre><code>参数设置：
-
-//mysql
+<p>//mysql
 	max_connections = 1000
 	max_connections = 1000
-//ulimit -n 
-	65535
+//ulimit -n
+	65535</p>
 
-生效的值：
+<p>生效的值：</p>
 
-open_files_limit = 65535
+<p>open_files_limit = 65535
 max_connections = 1000
 table_open_cache = 2000
-</code></pre>
+```</p>
 
 <h2 id="其它:ff1a89ac228b92df24d68eae2d0babea">其它</h2>
 
@@ -390,8 +387,7 @@ table_open_cache = 2000
 <p>MySQL 的思路：
 在<strong>有限值</strong>的的范围内MySQL <strong>尽量</strong>将<code>effective_open_files</code>的值设大</p>
 
-<p><img src="media/2.png" alt="ddd" />
-</p>
+<p><img src="media/2.png" alt="ddd" /></p>
 
 <h3 id="修正request-open-files:ff1a89ac228b92df24d68eae2d0babea">修正request_open_files</h3>
 
@@ -438,63 +434,61 @@ limit = max(limit1,limt2);
 <hr />
 
 <ul>
-<li>系统资源不够且无法调整</li>
+<li>系统资源不够且无法调整
+```
+参数设置：</li>
 </ul>
 
-<pre><code>参数设置：
-
-//mysql
+<p>//mysql
 	max_connections = 1000
-//ulimit -n 
-	1024
+//ulimit -n
+	1024</p>
 
-生效的值：
+<p>生效的值：</p>
 
-open_files_limit = 1024
+<p>open_files_limit = 1024
 max_connections = 1024 - 10 - 800 = 214
-table_open_cache = ( 1024 - 10 - 214) / 2 = 400
+table_open_cache = ( 1024 - 10 - 214) / 2 = 400</p>
+
+<pre><code>
+---
+- 系统资源不够可以调整
 </code></pre>
 
-<hr />
+<p>参数设置：</p>
 
-<ul>
-<li>系统资源不够可以调整</li>
-</ul>
-
-<pre><code>参数设置：
-
-//mysql
+<p>//mysql
 	max_connections = 1000
-//ulimit -S -n 
+//ulimit -S -n
 	1000
-//ulimit -H -n 
-	65535
+//ulimit -H -n
+	65535</p>
 
-生效的值：
+<p>生效的值：</p>
 
-open_files_limit = 65535
+<p>open_files_limit = 65535
 max_connections = 1000
-table_open_cache = ( 1024 - 10 - 214) / 2 = 400
+table_open_cache = ( 1024 - 10 - 214) / 2 = 400</p>
+
+<pre><code>
+---
+mysql 修改 open_files_limit
 </code></pre>
 
-<hr />
+<p>参数设置：</p>
 
-<p>mysql 修改 open_files_limit</p>
-
-<pre><code>参数设置：
-
-//mysql
+<p>//mysql
 	max_connections = 1000
 	max_connections = 1000
-//ulimit -n 
-	65535
+//ulimit -n
+	65535</p>
 
-生效的值：
+<p>生效的值：</p>
 
-open_files_limit = 65535
+<p>open_files_limit = 65535
 max_connections = 1000
 table_open_cache = 2000
-</code></pre>
+```</p>
 
 <h2 id="其它:ff1a89ac228b92df24d68eae2d0babea">其它</h2>
 
@@ -537,14 +531,14 @@ table_open_cache = 2000
         </section>
         <ul id="categories">
           
-            <li><a href="http://erica-zhou.github.io//topics/development">Development</a> </li>
+            <li><a href="http://erica-zhou.github.io/topics/development">Development</a> </li>
           
         </ul>
         <ul id="tags">
           
-            <li> <a href="http://erica-zhou.github.io//tags/development">development</a> </li>
+            <li> <a href="http://erica-zhou.github.io/tags/development">development</a> </li>
           
-            <li> <a href="http://erica-zhou.github.io//tags/mysql">mysql</a> </li>
+            <li> <a href="http://erica-zhou.github.io/tags/mysql">mysql</a> </li>
           
         </ul>
     </div>
@@ -559,17 +553,16 @@ table_open_cache = 2000
 
     <div>
         <section id="author">
-             <h4>关于作者:</h4> 
-                一名在魔都奋斗开发员，始终相信早时不作业，晚时不作息这句话，是<a
-                href="https://github.com/erica-zhou/tester-on-docker" target="_blank">tester-on-docker</a>的作者。
-                <br/> 可以通过 <a href="http://weibo.com/dongzouxigu" target="_blank">微博</a>,
-                <a href="http://github.com/erica-zhou" target="_blank">Github</a>或者<a href="mailto:zhou.erica.w@gmail.com">Gmail</a>联系作者。
+             <h4>关于作者:			 西顾~</h4> 
+			 
+              
+	 
         </section>
     </div>
 
 </aside>
 
-<meta itemprop="wordCount" content="258">
+<meta itemprop="wordCount" content="263">
 <meta itemprop="datePublished" content="2015-06-06">
 <meta itemprop="url" content="http://erica-zhou.github.io/posts/mysql_variables/">
 

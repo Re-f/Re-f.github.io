@@ -7,8 +7,18 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <copyright>Copyright (c) 2008 - 2015, Erica Zhou; all rights reserved.</copyright>
-    <lastBuildDate>Sun, 16 Aug 2015 23:04:24 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 05 Sep 2015 17:11:21 +0800</lastBuildDate>
     <atom:link href="http://erica-zhou.github.io/topics/development/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>js 函数与其它语言的差异</title>
+      <link>http://erica-zhou.github.io/posts/js_function/</link>
+      <pubDate>Sat, 05 Sep 2015 17:11:21 +0800</pubDate>
+      
+      <guid>http://erica-zhou.github.io/posts/js_function/</guid>
+      <description>&lt;p&gt;跟 go 相比，js 符合函数是第一对象的这个特性&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>利用 git hook 搭建自动编译部署测试环境</title>
@@ -75,17 +85,16 @@
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;http://www.tuicool.com/articles/3QRB7jU&#34;&gt;在测试服务器上建立代码的远程仓库&amp;amp;代码仓库&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;http://git-scm.com/docs/githooks&#34;&gt;添加 post_recieve hook&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;container 中安装 ssh：&lt;/li&gt;
-&lt;/ul&gt;
+
+&lt;li&gt;&lt;p&gt;container 中安装 ssh：&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;	$ yum install openssh-server 
 	$ echo root:sshpass | chpasswd
 	$ sed &#39;s@session\s*required\s*pam_loginuid.so@session optional 	pam_loginuid.so@g&#39; -i /etc/pam.d/sshd
 	$ /etc/init.d/sshd start
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
 
-&lt;ul&gt;
-&lt;li&gt;将&lt;code&gt;ci_server&lt;/code&gt;的ssh端口（22）映射的宿主机时，一般无法映射到相同的22端口上，因此开发机的本地仓库添加&lt;code&gt;ci_server&lt;/code&gt;远端仓库时，需要指定端口号，方法如下： &lt;code&gt;ssh://git@github.com:22/asdf/asdf.git&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;将&lt;code&gt;ci_server&lt;/code&gt;的ssh端口（22）映射的宿主机时，一般无法映射到相同的22端口上，因此开发机的本地仓库添加&lt;code&gt;ci_server&lt;/code&gt;远端仓库时，需要指定端口号，方法如下： &lt;code&gt;ssh://git@github.com:22/asdf/asdf.git&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </description>
     </item>
@@ -145,8 +154,7 @@
 &lt;p&gt;MySQL 的思路：
 在&lt;strong&gt;有限值&lt;/strong&gt;的的范围内MySQL &lt;strong&gt;尽量&lt;/strong&gt;将&lt;code&gt;effective_open_files&lt;/code&gt;的值设大&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;media/2.png&#34; alt=&#34;ddd&#34; /&gt;
-&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;media/2.png&#34; alt=&#34;ddd&#34; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&#34;修正request-open-files:ff1a89ac228b92df24d68eae2d0babea&#34;&gt;修正request_open_files&lt;/h3&gt;
 
@@ -193,63 +201,61 @@ limit = max(limit1,limt2);
 &lt;hr /&gt;
 
 &lt;ul&gt;
-&lt;li&gt;系统资源不够且无法调整&lt;/li&gt;
+&lt;li&gt;系统资源不够且无法调整
+```
+参数设置：&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;pre&gt;&lt;code&gt;参数设置：
-
-//mysql
+&lt;p&gt;//mysql
 	max_connections = 1000
-//ulimit -n 
-	1024
+//ulimit -n
+	1024&lt;/p&gt;
 
-生效的值：
+&lt;p&gt;生效的值：&lt;/p&gt;
 
-open_files_limit = 1024
+&lt;p&gt;open_files_limit = 1024
 max_connections = 1024 - 10 - 800 = 214
-table_open_cache = ( 1024 - 10 - 214) / 2 = 400
+table_open_cache = ( 1024 - 10 - 214) / 2 = 400&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;
+---
+- 系统资源不够可以调整
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;hr /&gt;
+&lt;p&gt;参数设置：&lt;/p&gt;
 
-&lt;ul&gt;
-&lt;li&gt;系统资源不够可以调整&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;pre&gt;&lt;code&gt;参数设置：
-
-//mysql
+&lt;p&gt;//mysql
 	max_connections = 1000
-//ulimit -S -n 
+//ulimit -S -n
 	1000
-//ulimit -H -n 
-	65535
+//ulimit -H -n
+	65535&lt;/p&gt;
 
-生效的值：
+&lt;p&gt;生效的值：&lt;/p&gt;
 
-open_files_limit = 65535
+&lt;p&gt;open_files_limit = 65535
 max_connections = 1000
-table_open_cache = ( 1024 - 10 - 214) / 2 = 400
+table_open_cache = ( 1024 - 10 - 214) / 2 = 400&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;
+---
+mysql 修改 open_files_limit
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;hr /&gt;
+&lt;p&gt;参数设置：&lt;/p&gt;
 
-&lt;p&gt;mysql 修改 open_files_limit&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;参数设置：
-
-//mysql
+&lt;p&gt;//mysql
 	max_connections = 1000
 	max_connections = 1000
-//ulimit -n 
-	65535
+//ulimit -n
+	65535&lt;/p&gt;
 
-生效的值：
+&lt;p&gt;生效的值：&lt;/p&gt;
 
-open_files_limit = 65535
+&lt;p&gt;open_files_limit = 65535
 max_connections = 1000
 table_open_cache = 2000
-&lt;/code&gt;&lt;/pre&gt;
+```&lt;/p&gt;
 
 &lt;h2 id=&#34;其它:ff1a89ac228b92df24d68eae2d0babea&#34;&gt;其它&lt;/h2&gt;
 

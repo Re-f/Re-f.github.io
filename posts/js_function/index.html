@@ -9,26 +9,27 @@
 <meta name="MobileOptimized" content="320">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<meta name="description" content="Hello world!">
-<meta name="keywords" content="Hello, ">
+
+<meta name="keywords" content="javascripts, development, ">
 
  
 <meta property="og:type" content="article"/>
-<meta property="og:description" content="Hello world!"/>
-<meta property="og:title" content="Hello world ! : 西顾.com"/>
+<meta property="og:description" content=""/>
+<meta property="og:title" content="js 函数与其它语言的差异 : 西顾.com"/>
 <meta property="og:site_name" content="西顾 is Steve Francia"/>
 <meta property="og:image" content="" />
 <meta property="og:image:type" content="image/jpeg" />
 <meta property="og:image:width" content="" />
 <meta property="og:image:height" content="" />
-<meta property="og:url" content="http://localhost:1313/post/hello-world/">
+<meta property="og:url" content="http://erica-zhou.github.io/posts/js_function/">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2015-01-25"/>
-<meta property="article:modified_time" content="2015-01-25"/>
+<meta property="article:published_time" content="2015-09-05"/>
+<meta property="article:modified_time" content="2015-09-05"/>
 
 
 
-<meta property="article:tag" content="Hello">
+<meta property="article:tag" content="javascripts">
+<meta property="article:tag" content="development">
 
 
 
@@ -36,17 +37,17 @@
 <meta name="twitter:card" content="summary">
 
 <meta name="twitter:site" content="@erica_luo">
-<meta name="twitter:title" content="Hello world ! : Erica">
+<meta name="twitter:title" content="js 函数与其它语言的差异 : Erica">
 <meta name="twitter:creator" content="@erica_luo">
-<meta name="twitter:description" content="Hello world!">
+<meta name="twitter:description" content="">
 <meta name="twitter:image:src" content="">
-<meta name="twitter:domain" content="spf13.com">
+<meta name="twitter:domain" content="xigu.com">
 
 
 
-    <base href="http://localhost:1313/">
-    <title> Hello world !</title>
-    <link rel="canonical" href="http://localhost:1313/post/hello-world/">
+    <base href="http://erica-zhou.github.io">
+    <title> js 函数与其它语言的差异</title>
+    <link rel="canonical" href="http://erica-zhou.github.io/posts/js_function/">
     
 
     <link href='http://fonts.googleapis.com/css?family=Fjalla+One|Open+Sans:300' rel='stylesheet' type='text/css'>
@@ -65,7 +66,7 @@
     <nav id="nav">
            <ul id="mainnav">
             <li>
-                <a href="/post/">
+                <a href="/posts/">
                 <span class="icon"> <i aria-hidden="true" class="icon-quill"></i></span>
                 <span> 博客 </span>
             </a>
@@ -83,9 +84,9 @@
             </a>
             </li>
            <br/> <li>
-            <a href="/presentation/">
+            <a href="/Tsukkomi/">
                 <span class="icon"> <i aria-hidden="true" class="icon-pencil"></i></span>
-                <span> 记录 </span>
+                <span> 吐个小槽 </span>
             </a>
             </li>
            
@@ -111,10 +112,10 @@
                 <span class="title"> share </span>
                 <div class="dropdown share">
                     <ul class="social">
-                      <li> <a href="https://twitter.com/intent/tweet?status=Hello%20world%20%21-http%3a%2f%2flocalhost%3a1313%2fpost%2fhello-world%2f" target="_blank" title="Follow me on Twitter" class="twitter"><span class="icon icon-twitter"></span>Twitter</a> </li>
-                        <li> <a href="https://www.facebook.com/sharer/sharer.php?u=http%3a%2f%2flocalhost%3a1313%2fpost%2fhello-world%2f" target="_blank" title="Join me on Facebook" class="facebook"><span class="icon icon-facebook"></span>Facebook</a> </li>
-                        <li> <a href="http://www.linkedin.com/shareArticle?mini=true&url=http%3a%2f%2flocalhost%3a1313%2fpost%2fhello-world%2f&title=Hello%20world%20%21&source=spf13" target="_blank" title="LinkedIn" class="linkedin"><span class="icon icon-linkedin"></span>LinkedIn</a> </li>
-                        <li> <a href="http://del.icio.us/post?url=http%3a%2f%2flocalhost%3a1313%2fpost%2fhello-world%2f" target="_blank" title="Delicious" class="delicious"><span class="icon icon-delicious"></span>Weibo</a> </li>
+                      <li> <a href="https://twitter.com/intent/tweet?status=js%20%e5%87%bd%e6%95%b0%e4%b8%8e%e5%85%b6%e5%ae%83%e8%af%ad%e8%a8%80%e7%9a%84%e5%b7%ae%e5%bc%82-http%3a%2f%2ferica-zhou.github.io%2fposts%2fjs_function%2f" target="_blank" title="Follow me on Twitter" class="twitter"><span class="icon icon-twitter"></span>Twitter</a> </li>
+                        <li> <a href="https://www.facebook.com/sharer/sharer.php?u=http%3a%2f%2ferica-zhou.github.io%2fposts%2fjs_function%2f" target="_blank" title="Join me on Facebook" class="facebook"><span class="icon icon-facebook"></span>Facebook</a> </li>
+                        <li> <a href="http://www.linkedin.com/shareArticle?mini=true&url=http%3a%2f%2ferica-zhou.github.io%2fposts%2fjs_function%2f&title=js%20%e5%87%bd%e6%95%b0%e4%b8%8e%e5%85%b6%e5%ae%83%e8%af%ad%e8%a8%80%e7%9a%84%e5%b7%ae%e5%bc%82&source=spf13" target="_blank" title="LinkedIn" class="linkedin"><span class="icon icon-linkedin"></span>LinkedIn</a> </li>
+                        <li> <a href="http://del.icio.us/post?url=http%3a%2f%2ferica-zhou.github.io%2fposts%2fjs_function%2f" target="_blank" title="Delicious" class="delicious"><span class="icon icon-delicious"></span>Weibo</a> </li>
                     </ul>
                     <span class="subcount">sharing is caring</span>
                 </div>
@@ -140,67 +141,85 @@
 
 
 <section id="main">
-  <h1 itemprop="name" id="title">Hello world !</h1>
+  <h1 itemprop="name">js 函数与其它语言的差异</h1>
+    <div>
+        <article itemprop="articleBody" id="content">
+            <div id="toc" class="well col-md-4 col-sm-6">
+            
+            </div>
+           <p>跟 go 相比，js 符合函数是第一对象的这个特性</p>
+
+        </article>
+  </div>
   <div>
         <article itemprop="articleBody" id="content">
-           
-
-<h1 id="hello-world:aa77bbfd89a7b0ff10def205b9c08d51">Hello world !</h1>
-
-<h1 id="welcome:aa77bbfd89a7b0ff10def205b9c08d51">Welcome!</h1>
+           <p>跟 go 相比，js 符合函数是第一对象的这个特性</p>
 
         </article>
   </div>
 </section>
 
-
 <aside id="meta">
+    <div itemscope itemtype="http://schema.org/SoftwareApplication" id="projectmeta">
+        
+
+        
+        <span class="smaller" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            by <span itemprop="name">西顾.</span></span><br>
+        <br>
+        
+        
+        
+        <meta itemprop="publisher" content="spf13.com">
+        <meta itemprop="softwareApplicationCategory" content="UtilitiesApplication">
+        <meta itemprop="operatingSystems" content="Windows 7 and above, OSX 10.7 and above, linux">
+    </div>
+
 
     <div>
         <section id="datecount">
-          <h4 id="date"> Sun Jan 25, 2015 </h4>
+          <h4 id="date"> Sat Sep 5, 2015 </h4>
           <h5 id="wc"> 100 Words </h5>
           <h5 id="readtime"> Read in about 1 Min </h5>
         </section>
         <ul id="categories">
           
+            <li><a href="http://erica-zhou.github.io/topics/development">Development</a> </li>
+          
         </ul>
         <ul id="tags">
           
-            <li> <a href="http://localhost:1313//tags/hello">Hello</a> </li>
+            <li> <a href="http://erica-zhou.github.io/tags/javascripts">javascripts</a> </li>
+          
+            <li> <a href="http://erica-zhou.github.io/tags/development">development</a> </li>
           
         </ul>
     </div>
 
     <div>
         <section id="prev">
-            &nbsp;<a class="previous" href="http://localhost:1313/me/"><i class="icon-arrow-left"></i> 关于我</a><br>
+            &nbsp;<a class="previous" href="http://erica-zhou.github.io/reading/%E9%AB%98%E6%95%88%E7%A8%8B%E5%BA%8F%E5%91%98%E7%9A%8445%E4%B8%AA%E4%B9%A0%E6%83%AF/"><i class="icon-arrow-left"></i> 高效程序员的45个习惯</a><br>
         </section><section id="next">
-            &nbsp;
+            &nbsp;<a class="next" href="http://erica-zhou.github.io/posts/put_up_dev_env/">利用 git hook 搭建自动编译部署测试环境 <i class="icon-arrow-right"></i></a>
         </section>
     </div>
 
     <div>
         <section id="author">
-             <h4>关于作者:</h4> 
-                一名在魔都奋斗开发员，始终相信早时不作业，晚时不作息这句话，是<a
-                href="https://github.com/erica-zhou/tester-on-docker" target="_blank">tester-on-docker</a>的作者。
-                <br/> 可以通过 <a href="http://weibo.com/dongzouxigu" target="_blank">微博</a>,
-                <a href="http://github.com/erica-zhou" target="_blank">Github</a>或者<a href="mailto:zhou.erica.w@gmail.com">Gmail</a>联系作者。
+             <h4>关于作者:			 西顾~</h4> 
+			 
+              
+	 
         </section>
     </div>
 
 </aside>
 
 <meta itemprop="wordCount" content="4">
-<meta itemprop="datePublished" content="2015-01-25">
-<meta itemprop="url" content="http://localhost:1313/post/hello-world/">
+<meta itemprop="datePublished" content="2015-09-05">
+<meta itemprop="url" content="http://erica-zhou.github.io/posts/js_function/">
 
 
-<aside id=comments>
-    <div><h2> Comments </h2></div>
-    
-</aside>
 
 <footer>
   <div>
@@ -228,9 +247,6 @@ fitText(document.getElementById('title'), 1)
   ga('require', 'displayfeatures');
   ga('send', 'pageview');
 </script>
-<script>document.write('<script src="http://'
-        + (location.host || 'localhost').split(':')[0]
-		+ ':1313/livereload.js?mindelay=10"></'
-        + 'script>')</script></body>
+</body>
 </html>
 
