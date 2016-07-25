@@ -234,81 +234,6 @@
 
         </article>
   </div>
-  <div>
-        <article itemprop="articleBody" id="content">
-           
-
-<h3 id="说明:62a450c8c89780770128cbd5f887c201">说明：</h3>
-
-<p>利用 docker，git 搭建自动编译部署测试环境
-<strong>步骤：</strong>
-1. 在 <code>dev_server</code>上 搭建测试环境
-2. 创建在 <code>ci_server</code>代码远端仓库 <code>test_repo</code>
-3. 在远端仓库中添加 post-recieve hook
-3. 在开发机上本地仓库上新添加一个远程仓库指向的远端仓库</p>
-
-<p><strong>说明：</strong>
-<code>dev_server</code>和 <code>ci_server</code>都是docker container</p>
-
-<p><strong>使用说明：</strong>
-每次 commit 后
-1. 在测试服务器上自动编译
-2. 在测试服务器上自动部署</p>
-
-<h2 id="步骤说明:62a450c8c89780770128cbd5f887c201">步骤说明</h2>
-
-<ol>
-<li>创建<code>dev_server</code>搭建测试环境：</li>
-<li>新建一个 container将程序能正常运行 的环境全部部署好，然后将该 container 保存为image，</li>
-
-<li><p>创建相关的 Dockfile
-创建 Dockfile 并不是一个必须的步骤，但是创建测试环境的 Dockfile，并保存，能让开发人员在换了测试服务器（非<code>dev_server</code>）后能快速的搭建测试环境而不需要重新搭建</p></li>
-
-<li><p>新建一个<code>ci_server</code> container</p></li>
-
-<li><p>新运行一个 container 名为<code>ci_server</code>，需要将<code>ci_server</code> 的端口22 映射到宿主机</p></li>
-
-<li><p>安装运行ssh</p></li>
-
-<li><p>配置好程序编译环境</p></li>
-
-<li><p>安装git</p>
-
-<ol>
-<li>创建远端仓库：在<code>test_repo</code>目录下执行 <code>git init --bare</code></li>
-<li>将开发机上的需要测试代码分支推到远端仓库后，在 <code>test_src</code>目录下执行<code>git clone $test_repo</code></li>
-</ol></li>
-
-<li><p>配置自动编译部署脚本，在远端仓库中添加 post-recieve hook，hook 包括3部分</p>
-
-<ol>
-<li>pull 刚刚提交的代码</li>
-<li>编译</li>
-<li>部署测试环境
-<strong>注意：</strong>
-在 hook 中，GIT_DIR 的值被设置为<code>.</code>,因此在使用 git 命令前可以删除这个变量，或者将它设置为你需要的的值</li>
-</ol></li>
-</ol>
-
-<h2 id="参考资料:62a450c8c89780770128cbd5f887c201">参考资料</h2>
-
-<ul>
-<li><a href="http://www.tuicool.com/articles/3QRB7jU">在测试服务器上建立代码的远程仓库&amp;代码仓库</a></li>
-<li><a href="http://git-scm.com/docs/githooks">添加 post_recieve hook</a></li>
-
-<li><p>container 中安装 ssh：</p>
-
-<pre><code>	$ yum install openssh-server 
-	$ echo root:sshpass | chpasswd
-	$ sed 's@session\s*required\s*pam_loginuid.so@session optional 	pam_loginuid.so@g' -i /etc/pam.d/sshd
-	$ /etc/init.d/sshd start
-</code></pre></li>
-
-<li><p>将<code>ci_server</code>的ssh端口（22）映射的宿主机时，一般无法映射到相同的22端口上，因此开发机的本地仓库添加<code>ci_server</code>远端仓库时，需要指定端口号，方法如下： <code>ssh://git@github.com:22/asdf/asdf.git</code></p></li>
-</ul>
-
-        </article>
-  </div>
 </section>
 
 <aside id="meta">
@@ -356,7 +281,7 @@
 
     <div>
         <section id="prev">
-            &nbsp;<a class="previous" href="http://erica-zhou.github.io/posts/js_function/"><i class="icon-arrow-left"></i> js 函数与其它语言的差异</a><br>
+            &nbsp;<a class="previous" href="http://erica-zhou.github.io/reading/%E9%AB%98%E6%95%88%E7%A8%8B%E5%BA%8F%E5%91%98%E7%9A%8445%E4%B8%AA%E4%B9%A0%E6%83%AF/"><i class="icon-arrow-left"></i> 高效程序员的45个习惯</a><br>
         </section><section id="next">
             &nbsp;<a class="next" href="http://erica-zhou.github.io/posts/mysql_variables/">MySQL调整参数:open_files_limit &amp; max_connections &amp; table_open_cache <i class="icon-arrow-right"></i></a>
         </section>

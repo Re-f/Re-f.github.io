@@ -77,5 +77,15 @@
 </description>
     </item>
     
+    <item>
+      <title>关于我</title>
+      <link>http://erica-zhou.github.io/travel/me/</link>
+      <pubDate>Sun, 25 Jan 2015 19:13:59 +0800</pubDate>
+      
+      <guid>http://erica-zhou.github.io/travel/me/</guid>
+      <description>&lt;p&gt;一个在魔都工作的女程序员，懒了24年终于在本命决定开始努力！&lt;/p&gt;
+</description>
+    </item>
+    
   </channel>
 </rss>
