@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>效率 on Erica On The Way</title>
+    <link>http://erica-zhou.github.io/tags/%E6%95%88%E7%8E%87/</link>
+    <description>Recent content in 效率 on Erica On The Way</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>Copyright (c) 2008 - 2015, Erica Zhou; all rights reserved.</copyright>
+    <lastBuildDate>Sat, 06 Jun 2015 11:10:08 +0800</lastBuildDate>
+    <atom:link href="http://erica-zhou.github.io/tags/%E6%95%88%E7%8E%87/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>mysqlsandbox 的安装与使用</title>
+      <link>http://erica-zhou.github.io/posts/mysql-sandbox/</link>
+      <pubDate>Sat, 06 Jun 2015 11:10:08 +0800</pubDate>
+      
+      <guid>http://erica-zhou.github.io/posts/mysql-sandbox/</guid>
+      <description>&lt;p&gt;官网：&lt;a href=&#34;http://mysqlsandbox.net/&#34;&gt;http://mysqlsandbox.net/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;用途：&lt;/p&gt;
+
+&lt;p&gt;方便快捷迅速的在一台机器上搭建 mysql 实例，包括：单个 mysql 实例，主从复制的 mysql 实例，和mysql 多实例，对于测试非常方便
+具体安装使用请参照官网，在使用时碰到了两个问题，&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;Can&amp;rsquo;t locate ExtUtils/MakeMaker.pm in @INC&lt;/p&gt;
+
+&lt;p&gt;解决办法：&lt;code&gt;yum install perl-ExtUtils-CBuilder perl-ExtUtils-MakeMaker&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;使用异常，不论是执行 &lt;code&gt;make_replication_sandbox&lt;/code&gt;，还是&lt;code&gt;make_replication_sandbox&lt;/code&gt; 都提示以下信息：
+&amp;gt; Use of uninitialized value $ENV{&amp;ldquo;USER&amp;rdquo;} in concatenation (.) or string at /usr/local/share/perl5/MySQL/Sandbox/Scripts.pm line 68.
+installing and starting master&lt;/p&gt;
+
+&lt;p&gt;解决方法：设置环境变量 USER&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

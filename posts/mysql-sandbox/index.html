@@ -10,7 +10,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-<meta name="keywords" content="development, mysql, ">
+<meta name="keywords" content="development, mysql, 效率, ">
 
  
 <meta property="og:type" content="article"/>
@@ -30,6 +30,7 @@
 
 <meta property="article:tag" content="development">
 <meta property="article:tag" content="mysql">
+<meta property="article:tag" content="效率">
 
 
 
@@ -147,26 +148,24 @@
             <div id="toc" class="well col-md-4 col-sm-6">
             
             </div>
-           <p>官网：<a href="http://mysqlsandbox.net/">http://mysqlsandbox.net/</a>
-用途：
-方便快捷迅速的在一台机器上搭建 mysql 实例，包括：单个 mysql 实例，主从复制的 mysql 实例，和mysql 多实例，对于测试非常方便
-具体安装使用请参照官网，在使用时碰到了两个问题，
-1. Can&rsquo;t locate ExtUtils/MakeMaker.pm in @INC</p>
+           <p>官网：<a href="http://mysqlsandbox.net/">http://mysqlsandbox.net/</a></p>
 
-<blockquote>
-<p>解决办法：<code>yum install perl-ExtUtils-CBuilder perl-ExtUtils-MakeMaker</code></p>
-</blockquote>
+<p>用途：</p>
+
+<p>方便快捷迅速的在一台机器上搭建 mysql 实例，包括：单个 mysql 实例，主从复制的 mysql 实例，和mysql 多实例，对于测试非常方便
+具体安装使用请参照官网，在使用时碰到了两个问题，</p>
 
 <ol>
-<li><p>使用异常，不论是执行 <code>make_replication_sandbox</code>，还是<code>make_replication_sandbox</code> 都提示以下信息：</p>
+<li><p>Can&rsquo;t locate ExtUtils/MakeMaker.pm in @INC</p>
 
-<p>Use of uninitialized value $ENV{&ldquo;USER&rdquo;} in concatenation (.) or string at /usr/local/share/perl5/MySQL/Sandbox/Scripts.pm line 68.
-installing and starting master</p></li>
+<p>解决办法：<code>yum install perl-ExtUtils-CBuilder perl-ExtUtils-MakeMaker</code></p></li>
+
+<li><p>使用异常，不论是执行 <code>make_replication_sandbox</code>，还是<code>make_replication_sandbox</code> 都提示以下信息：
+&gt; Use of uninitialized value $ENV{&ldquo;USER&rdquo;} in concatenation (.) or string at /usr/local/share/perl5/MySQL/Sandbox/Scripts.pm line 68.
+installing and starting master</p>
+
+<p>解决方法：设置环境变量 USER</p></li>
 </ol>
-
-<blockquote>
-<p>解决方法：设置环境变量 USER</p>
-</blockquote>
 
         </article>
   </div>
@@ -205,6 +204,8 @@ installing and starting master</p></li>
             <li> <a href="http://erica-zhou.github.io/tags/development">development</a> </li>
           
             <li> <a href="http://erica-zhou.github.io/tags/mysql">mysql</a> </li>
+          
+            <li> <a href="http://erica-zhou.github.io/tags/%E6%95%88%E7%8E%87">效率</a> </li>
           
         </ul>
     </div>
