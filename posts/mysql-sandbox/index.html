@@ -146,11 +146,29 @@
     <div>
         <article itemprop="articleBody" id="content">
             <div id="toc" class="well col-md-4 col-sm-6">
-            
+            <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#说明:7deb6b066ac0af0f9aba978ce5b183e8">说明</a></li>
+<li><a href="#安装:7deb6b066ac0af0f9aba978ce5b183e8">安装</a></li>
+<li><a href="#使用:7deb6b066ac0af0f9aba978ce5b183e8">使用</a>
+<ul>
+<li><a href="#使用-gtid-的主从复制:7deb6b066ac0af0f9aba978ce5b183e8">使用 gtid 的主从复制</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
             </div>
-           <p>官网：<a href="http://mysqlsandbox.net/">http://mysqlsandbox.net/</a></p>
+           
+
+<h2 id="说明:7deb6b066ac0af0f9aba978ce5b183e8">说明</h2>
+
+<p>官网：<a href="http://mysqlsandbox.net/">http://mysqlsandbox.net/</a></p>
 
 <p>用途：</p>
+
+<h2 id="安装:7deb6b066ac0af0f9aba978ce5b183e8">安装</h2>
 
 <p>方便快捷迅速的在一台机器上搭建 mysql 实例，包括：单个 mysql 实例，主从复制的 mysql 实例，和mysql 多实例，对于测试非常方便
 具体安装使用请参照官网，在使用时碰到了两个问题，</p>
@@ -166,6 +184,17 @@ installing and starting master</p>
 
 <p>解决方法：设置环境变量 USER</p></li>
 </ol>
+
+<h2 id="使用:7deb6b066ac0af0f9aba978ce5b183e8">使用</h2>
+
+<h3 id="使用-gtid-的主从复制:7deb6b066ac0af0f9aba978ce5b183e8">使用 gtid 的主从复制</h3>
+
+<p><code>make_replication_sandbox</code> 建立复制集群时，指定 <code>--gtid</code> 并不生效,需要在建立复制后，使用 enable_gtid 命令工具使集群使用 gtid</p>
+
+<p>另外 <code>check_slave</code> 的输出是如下：</p>
+
+<p><img src="media/check_slave.png" alt="check_slave" />，
+并不会显示出 gtid 的信息，因此查看 slave 的复制情况仍然需要需要连入 mysql 查看况</p>
 
         </article>
   </div>
@@ -191,7 +220,7 @@ installing and starting master</p>
     <div>
         <section id="datecount">
           <h4 id="date"> Mon Jul 25, 2016 </h4>
-          <h5 id="wc"> 300 Words </h5>
+          <h5 id="wc"> 400 Words </h5>
           <h5 id="readtime"> Read in about 1 Min </h5>
         </section>
         <ul id="categories">
@@ -229,7 +258,7 @@ installing and starting master</p>
 
 </aside>
 
-<meta itemprop="wordCount" content="222">
+<meta itemprop="wordCount" content="315">
 <meta itemprop="datePublished" content="2016-07-25">
 <meta itemprop="url" content="http://erica-zhou.github.io/posts/mysql-sandbox/">
 
