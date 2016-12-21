@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>效率 on Erica On The Way</title>
-    <link>http://erica-zhou.github.io/tags/%E6%95%88%E7%8E%87/</link>
+    <link>http://eeeerica.github.io/tags/%E6%95%88%E7%8E%87/</link>
     <description>Recent content in 效率 on Erica On The Way</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <copyright>Copyright (c) 2008 - 2015, Erica Zhou; all rights reserved.</copyright>
     <lastBuildDate>Mon, 25 Jul 2016 11:10:08 +0800</lastBuildDate>
-    <atom:link href="http://erica-zhou.github.io/tags/%E6%95%88%E7%8E%87/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://eeeerica.github.io/tags/%E6%95%88%E7%8E%87/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>mysqlsandbox 的安装与使用</title>
-      <link>http://erica-zhou.github.io/posts/mysql-sandbox/</link>
+      <link>http://eeeerica.github.io/posts/mysql-sandbox/</link>
       <pubDate>Mon, 25 Jul 2016 11:10:08 +0800</pubDate>
       
-      <guid>http://erica-zhou.github.io/posts/mysql-sandbox/</guid>
+      <guid>http://eeeerica.github.io/posts/mysql-sandbox/</guid>
       <description>
 
 &lt;h2 id=&#34;说明:7deb6b066ac0af0f9aba978ce5b183e8&#34;&gt;说明&lt;/h2&gt;

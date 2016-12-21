@@ -2,20 +2,29 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Development on Erica On The Way</title>
-    <link>http://erica-zhou.github.io/topics/development/</link>
+    <link>http://eeeerica.github.io/topics/development/</link>
     <description>Recent content in Development on Erica On The Way</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <copyright>Copyright (c) 2008 - 2015, Erica Zhou; all rights reserved.</copyright>
-    <lastBuildDate>Mon, 25 Jul 2016 11:10:08 +0800</lastBuildDate>
-    <atom:link href="http://erica-zhou.github.io/topics/development/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 04 Aug 2016 22:44:21 +0800</lastBuildDate>
+    <atom:link href="http://eeeerica.github.io/topics/development/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>go runtime</title>
+      <link>http://eeeerica.github.io/posts/go-runtime/</link>
+      <pubDate>Thu, 04 Aug 2016 22:44:21 +0800</pubDate>
+      
+      <guid>http://eeeerica.github.io/posts/go-runtime/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>mysqlsandbox 的安装与使用</title>
-      <link>http://erica-zhou.github.io/posts/mysql-sandbox/</link>
+      <link>http://eeeerica.github.io/posts/mysql-sandbox/</link>
       <pubDate>Mon, 25 Jul 2016 11:10:08 +0800</pubDate>
       
-      <guid>http://erica-zhou.github.io/posts/mysql-sandbox/</guid>
+      <guid>http://eeeerica.github.io/posts/mysql-sandbox/</guid>
       <description>
 
 &lt;h2 id=&#34;说明:7deb6b066ac0af0f9aba978ce5b183e8&#34;&gt;说明&lt;/h2&gt;
@@ -56,10 +65,10 @@ installing and starting master&lt;/p&gt;
     
     <item>
       <title>利用 git hook 搭建自动编译部署测试环境</title>
-      <link>http://erica-zhou.github.io/posts/put_up_dev_env/</link>
+      <link>http://eeeerica.github.io/posts/put_up_dev_env/</link>
       <pubDate>Sun, 16 Aug 2015 23:04:24 +0800</pubDate>
       
-      <guid>http://erica-zhou.github.io/posts/put_up_dev_env/</guid>
+      <guid>http://eeeerica.github.io/posts/put_up_dev_env/</guid>
       <description>
 
 &lt;h3 id=&#34;说明:62a450c8c89780770128cbd5f887c201&#34;&gt;说明：&lt;/h3&gt;
@@ -135,10 +144,10 @@ installing and starting master&lt;/p&gt;
     
     <item>
       <title>MySQL调整参数:open_files_limit &amp; max_connections &amp; table_open_cache</title>
-      <link>http://erica-zhou.github.io/posts/mysql_variables/</link>
+      <link>http://eeeerica.github.io/posts/mysql_variables/</link>
       <pubDate>Sat, 06 Jun 2015 11:10:08 +0800</pubDate>
       
-      <guid>http://erica-zhou.github.io/posts/mysql_variables/</guid>
+      <guid>http://eeeerica.github.io/posts/mysql_variables/</guid>
       <description>
 
 &lt;h2 id=&#34;起因:ff1a89ac228b92df24d68eae2d0babea&#34;&gt;起因&lt;/h2&gt;

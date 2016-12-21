@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Go on Erica On The Way</title>
+    <link>http://eeeerica.github.io/tags/go/</link>
+    <description>Recent content in Go on Erica On The Way</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>Copyright (c) 2008 - 2015, Erica Zhou; all rights reserved.</copyright>
+    <lastBuildDate>Thu, 04 Aug 2016 22:50:37 +0800</lastBuildDate>
+    <atom:link href="http://eeeerica.github.io/tags/go/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>go 语言学习笔记</title>
+      <link>http://eeeerica.github.io/reading/go%20%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</link>
+      <pubDate>Thu, 04 Aug 2016 22:50:37 +0800</pubDate>
+      
+      <guid>http://eeeerica.github.io/reading/go%20%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</guid>
+      <description>
+
+&lt;h2 id=&#34;14章-15章:7c711eafe338d2c27b570150e8f628b8&#34;&gt;14章-15章&lt;/h2&gt;
+
+&lt;p&gt;go 在初始化的过程中做了些什么，包括内存的初始化，gc 初始化，已经 main 函数和各个包 init 的初始化&lt;/p&gt;
+
+&lt;h2 id=&#34;16章-内存分配:7c711eafe338d2c27b570150e8f628b8&#34;&gt;16章 内存分配&lt;/h2&gt;
+
+&lt;p&gt;go 自主管理内存分配，有个很重要的原因是为了配合垃圾回收
+评价内存分配器的一个点：在性能和利用率之间做到平衡&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>go runtime</title>
+      <link>http://eeeerica.github.io/posts/go-runtime/</link>
+      <pubDate>Thu, 04 Aug 2016 22:44:21 +0800</pubDate>
+      
+      <guid>http://eeeerica.github.io/posts/go-runtime/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

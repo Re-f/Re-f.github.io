@@ -9,28 +9,28 @@
 <meta name="MobileOptimized" content="320">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-
-<meta name="keywords" content="development, mysql, 效率, ">
+<meta name="description" content="要么旅行，要么读书，身体和思想，必须有一个在路上">
+<meta name="keywords" content="go, development, garbage collection, ">
 
  
 <meta property="og:type" content="article"/>
-<meta property="og:description" content=""/>
-<meta property="og:title" content="mysqlsandbox 的安装与使用 : 西顾.com"/>
+<meta property="og:description" content="要么旅行，要么读书，身体和思想，必须有一个在路上"/>
+<meta property="og:title" content="go 语言学习笔记 : 西顾.com"/>
 <meta property="og:site_name" content="西顾 is Steve Francia"/>
 <meta property="og:image" content="" />
 <meta property="og:image:type" content="image/jpeg" />
 <meta property="og:image:width" content="" />
 <meta property="og:image:height" content="" />
-<meta property="og:url" content="http://eeeerica.github.io/posts/mysql-sandbox/">
+<meta property="og:url" content="http://eeeerica.github.io/reading/go%20%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2016-07-25"/>
-<meta property="article:modified_time" content="2016-07-25"/>
+<meta property="article:published_time" content="2016-08-04"/>
+<meta property="article:modified_time" content="2016-08-04"/>
 
 
 
+<meta property="article:tag" content="go">
 <meta property="article:tag" content="development">
-<meta property="article:tag" content="mysql">
-<meta property="article:tag" content="效率">
+<meta property="article:tag" content="garbage collection">
 
 
 
@@ -38,17 +38,17 @@
 <meta name="twitter:card" content="summary">
 
 <meta name="twitter:site" content="@erica_luo">
-<meta name="twitter:title" content="mysqlsandbox 的安装与使用 : Erica">
+<meta name="twitter:title" content="go 语言学习笔记 : Erica">
 <meta name="twitter:creator" content="@erica_luo">
-<meta name="twitter:description" content="">
+<meta name="twitter:description" content="要么旅行，要么读书，身体和思想，必须有一个在路上">
 <meta name="twitter:image:src" content="">
 <meta name="twitter:domain" content="xigu.com">
 
 
 
     <base href="http://eeeerica.github.io">
-    <title> mysqlsandbox 的安装与使用</title>
-    <link rel="canonical" href="http://eeeerica.github.io/posts/mysql-sandbox/">
+    <title> go 语言学习笔记</title>
+    <link rel="canonical" href="http://eeeerica.github.io/reading/go%20%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
     
 
     <link href='http://fonts.googleapis.com/css?family=Fjalla+One|Open+Sans:300' rel='stylesheet' type='text/css'>
@@ -113,10 +113,10 @@
                 <span class="title"> share </span>
                 <div class="dropdown share">
                     <ul class="social">
-                      <li> <a href="https://twitter.com/intent/tweet?status=mysqlsandbox%20%e7%9a%84%e5%ae%89%e8%a3%85%e4%b8%8e%e4%bd%bf%e7%94%a8-http%3a%2f%2feeeerica.github.io%2fposts%2fmysql-sandbox%2f" target="_blank" title="Follow me on Twitter" class="twitter"><span class="icon icon-twitter"></span>Twitter</a> </li>
-                        <li> <a href="https://www.facebook.com/sharer/sharer.php?u=http%3a%2f%2feeeerica.github.io%2fposts%2fmysql-sandbox%2f" target="_blank" title="Join me on Facebook" class="facebook"><span class="icon icon-facebook"></span>Facebook</a> </li>
-                        <li> <a href="http://www.linkedin.com/shareArticle?mini=true&url=http%3a%2f%2feeeerica.github.io%2fposts%2fmysql-sandbox%2f&title=mysqlsandbox%20%e7%9a%84%e5%ae%89%e8%a3%85%e4%b8%8e%e4%bd%bf%e7%94%a8&source=spf13" target="_blank" title="LinkedIn" class="linkedin"><span class="icon icon-linkedin"></span>LinkedIn</a> </li>
-                        <li> <a href="http://v.t.sina.com.cn/share/share.php?title=mysqlsandbox%20%e7%9a%84%e5%ae%89%e8%a3%85%e4%b8%8e%e4%bd%bf%e7%94%a8&url=http%3a%2f%2feeeerica.github.io%2fposts%2fmysql-sandbox%2f" target="_blank" title="Delicious" class="delicious"><span class="icon icon-delicious"></span>Weibo</a> </li>
+                      <li> <a href="https://twitter.com/intent/tweet?status=go%20%e8%af%ad%e8%a8%80%e5%ad%a6%e4%b9%a0%e7%ac%94%e8%ae%b0-http%3a%2f%2feeeerica.github.io%2freading%2fgo%2520%25E8%25AF%25AD%25E8%25A8%2580%25E5%25AD%25A6%25E4%25B9%25A0%25E7%25AC%2594%25E8%25AE%25B0%2f" target="_blank" title="Follow me on Twitter" class="twitter"><span class="icon icon-twitter"></span>Twitter</a> </li>
+                        <li> <a href="https://www.facebook.com/sharer/sharer.php?u=http%3a%2f%2feeeerica.github.io%2freading%2fgo%2520%25E8%25AF%25AD%25E8%25A8%2580%25E5%25AD%25A6%25E4%25B9%25A0%25E7%25AC%2594%25E8%25AE%25B0%2f" target="_blank" title="Join me on Facebook" class="facebook"><span class="icon icon-facebook"></span>Facebook</a> </li>
+                        <li> <a href="http://www.linkedin.com/shareArticle?mini=true&url=http%3a%2f%2feeeerica.github.io%2freading%2fgo%2520%25E8%25AF%25AD%25E8%25A8%2580%25E5%25AD%25A6%25E4%25B9%25A0%25E7%25AC%2594%25E8%25AE%25B0%2f&title=go%20%e8%af%ad%e8%a8%80%e5%ad%a6%e4%b9%a0%e7%ac%94%e8%ae%b0&source=spf13" target="_blank" title="LinkedIn" class="linkedin"><span class="icon icon-linkedin"></span>LinkedIn</a> </li>
+                        <li> <a href="http://v.t.sina.com.cn/share/share.php?title=go%20%e8%af%ad%e8%a8%80%e5%ad%a6%e4%b9%a0%e7%ac%94%e8%ae%b0&url=http%3a%2f%2feeeerica.github.io%2freading%2fgo%2520%25E8%25AF%25AD%25E8%25A8%2580%25E5%25AD%25A6%25E4%25B9%25A0%25E7%25AC%2594%25E8%25AE%25B0%2f" target="_blank" title="Delicious" class="delicious"><span class="icon icon-delicious"></span>Weibo</a> </li>
                     </ul>
                     <span class="subcount">sharing is caring</span>
                 </div>
@@ -142,59 +142,19 @@
 
 
 <section id="main">
-  <h1 itemprop="name">mysqlsandbox 的安装与使用</h1>
-    <div>
+  <h1 itemprop="name" id="title">go 语言学习笔记</h1>
+  <div>
         <article itemprop="articleBody" id="content">
-            <div id="toc" class="well col-md-4 col-sm-6">
-            <nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li><a href="#说明:7deb6b066ac0af0f9aba978ce5b183e8">说明</a></li>
-<li><a href="#安装:7deb6b066ac0af0f9aba978ce5b183e8">安装</a></li>
-<li><a href="#使用:7deb6b066ac0af0f9aba978ce5b183e8">使用</a>
-<ul>
-<li><a href="#使用-gtid-的主从复制:7deb6b066ac0af0f9aba978ce5b183e8">使用 gtid 的主从复制</a></li>
-</ul></li>
-</ul></li>
-</ul>
-</nav>
-            </div>
            
 
-<h2 id="说明:7deb6b066ac0af0f9aba978ce5b183e8">说明</h2>
+<h2 id="14章-15章:7c711eafe338d2c27b570150e8f628b8">14章-15章</h2>
 
-<p>官网：<a href="http://mysqlsandbox.net/">http://mysqlsandbox.net/</a></p>
+<p>go 在初始化的过程中做了些什么，包括内存的初始化，gc 初始化，已经 main 函数和各个包 init 的初始化</p>
 
-<p>用途：</p>
+<h2 id="16章-内存分配:7c711eafe338d2c27b570150e8f628b8">16章 内存分配</h2>
 
-<h2 id="安装:7deb6b066ac0af0f9aba978ce5b183e8">安装</h2>
-
-<p>方便快捷迅速的在一台机器上搭建 mysql 实例，包括：单个 mysql 实例，主从复制的 mysql 实例，和mysql 多实例，对于测试非常方便
-具体安装使用请参照官网，在使用时碰到了两个问题，</p>
-
-<ol>
-<li><p>Can&rsquo;t locate ExtUtils/MakeMaker.pm in @INC</p>
-
-<p>解决办法：<code>yum install perl-ExtUtils-CBuilder perl-ExtUtils-MakeMaker</code></p></li>
-
-<li><p>使用异常，不论是执行 <code>make_replication_sandbox</code>，还是<code>make_replication_sandbox</code> 都提示以下信息：
-&gt; Use of uninitialized value $ENV{&ldquo;USER&rdquo;} in concatenation (.) or string at /usr/local/share/perl5/MySQL/Sandbox/Scripts.pm line 68.
-installing and starting master</p>
-
-<p>解决方法：设置环境变量 USER</p></li>
-</ol>
-
-<h2 id="使用:7deb6b066ac0af0f9aba978ce5b183e8">使用</h2>
-
-<h3 id="使用-gtid-的主从复制:7deb6b066ac0af0f9aba978ce5b183e8">使用 gtid 的主从复制</h3>
-
-<p><code>make_replication_sandbox</code> 建立复制集群时，指定 <code>--gtid</code> 并不生效,需要在建立复制后，使用 enable_gtid 命令工具使集群使用 gtid</p>
-
-<p>另外 <code>check_slave</code> 的输出是如下：</p>
-
-<p><img src="media/check_slave.png" alt="check_slave" />，
-并不会显示出 gtid 的信息，因此查看 slave 的复制情况仍然需要需要连入 mysql 查看况</p>
+<p>go 自主管理内存分配，有个很重要的原因是为了配合垃圾回收
+评价内存分配器的一个点：在性能和利用率之间做到平衡</p>
 
         </article>
   </div>
@@ -219,31 +179,31 @@ installing and starting master</p>
 
     <div>
         <section id="datecount">
-          <h4 id="date"> Mon Jul 25, 2016 </h4>
-          <h5 id="wc"> 400 Words </h5>
+          <h4 id="date"> Thu Aug 4, 2016 </h4>
+          <h5 id="wc"> 100 Words </h5>
           <h5 id="readtime"> Read in about 1 Min </h5>
         </section>
         <ul id="categories">
           
-            <li><a href="http://eeeerica.github.io/topics/development">Development</a> </li>
+            <li><a href="http://eeeerica.github.io/topics/go-%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0">go 语言学习笔记</a> </li>
           
         </ul>
         <ul id="tags">
           
+            <li> <a href="http://eeeerica.github.io/tags/go">go</a> </li>
+          
             <li> <a href="http://eeeerica.github.io/tags/development">development</a> </li>
           
-            <li> <a href="http://eeeerica.github.io/tags/mysql">mysql</a> </li>
-          
-            <li> <a href="http://eeeerica.github.io/tags/%E6%95%88%E7%8E%87">效率</a> </li>
+            <li> <a href="http://eeeerica.github.io/tags/garbage-collection">garbage collection</a> </li>
           
         </ul>
     </div>
 
     <div>
         <section id="prev">
-            &nbsp;<a class="previous" href="http://eeeerica.github.io/posts/go-runtime/"><i class="icon-arrow-left"></i> go runtime</a><br>
+            &nbsp;
         </section><section id="next">
-            &nbsp;<a class="next" href="http://eeeerica.github.io/reading/%E9%AB%98%E6%95%88%E7%A8%8B%E5%BA%8F%E5%91%98%E7%9A%8445%E4%B8%AA%E4%B9%A0%E6%83%AF/">高效程序员的45个习惯 <i class="icon-arrow-right"></i></a>
+            &nbsp;<a class="next" href="http://eeeerica.github.io/posts/go-runtime/">go runtime <i class="icon-arrow-right"></i></a>
         </section>
     </div>
 
@@ -258,9 +218,9 @@ installing and starting master</p>
 
 </aside>
 
-<meta itemprop="wordCount" content="315">
-<meta itemprop="datePublished" content="2016-07-25">
-<meta itemprop="url" content="http://eeeerica.github.io/posts/mysql-sandbox/">
+<meta itemprop="wordCount" content="95">
+<meta itemprop="datePublished" content="2016-08-04">
+<meta itemprop="url" content="http://eeeerica.github.io/reading/go%20%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
 
 
 
