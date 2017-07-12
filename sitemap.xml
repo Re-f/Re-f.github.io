@@ -3,12 +3,12 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>http://root-w.github.io/%E7%A8%8B%E5%BA%8F%E7%8C%BF/</loc>
+    <loc>http://root-w.github.io/programmer/</loc>
     <lastmod>2016-07-25T11:10:08+08:00</lastmod>
   </url>
   
   <url>
-    <loc>http://root-w.github.io/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/</loc>
+    <loc>http://root-w.github.io/reading/</loc>
     <lastmod>2016-08-04T22:50:37+08:00</lastmod>
   </url>
   
@@ -18,37 +18,37 @@
   </url>
   
   <url>
-    <loc>http://root-w.github.io/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/go-%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</loc>
+    <loc>http://root-w.github.io/reading/qyuhengo/</loc>
     <lastmod>2016-08-04T22:50:37+08:00</lastmod>
   </url>
   
   <url>
-    <loc>http://root-w.github.io/%E7%A8%8B%E5%BA%8F%E7%8C%BF/mysql-sandbox/</loc>
+    <loc>http://root-w.github.io/programmer/mysql-sandbox/</loc>
     <lastmod>2016-07-25T11:10:08+08:00</lastmod>
   </url>
   
   <url>
-    <loc>http://root-w.github.io/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E9%AB%98%E6%95%88%E7%A8%8B%E5%BA%8F%E5%91%98%E7%9A%8445%E4%B8%AA%E4%B9%A0%E6%83%AF/</loc>
+    <loc>http://root-w.github.io/reading/practices-of-agile-devepler/</loc>
     <lastmod>2016-04-09T14:36:48+08:00</lastmod>
   </url>
   
   <url>
-    <loc>http://root-w.github.io/%E7%A8%8B%E5%BA%8F%E7%8C%BF/put_up_dev_env/</loc>
+    <loc>http://root-w.github.io/programmer/put_up_dev_env/</loc>
     <lastmod>2015-08-16T23:04:24+08:00</lastmod>
   </url>
   
   <url>
-    <loc>http://root-w.github.io/%E7%A8%8B%E5%BA%8F%E7%8C%BF/mysql_variables/</loc>
+    <loc>http://root-w.github.io/programmer/mysql_variables/</loc>
     <lastmod>2015-06-06T11:10:08+08:00</lastmod>
   </url>
   
   <url>
-    <loc>http://root-w.github.io/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E6%B2%B3%E8%A5%BF%E8%B5%B0%E5%BB%8A%E8%A7%82%E5%90%8E%E6%84%9F/</loc>
+    <loc>http://root-w.github.io/reading/hexi-corridor/</loc>
     <lastmod>2015-05-12T21:35:47+08:00</lastmod>
   </url>
   
   <url>
-    <loc>http://root-w.github.io/%E6%97%85%E8%A1%8C/%E6%99%AE%E9%99%80%E8%A1%8C/</loc>
+    <loc>http://root-w.github.io/travel-to-mount-putuo/</loc>
     <lastmod>2015-03-28T02:58:23+08:00</lastmod>
   </url>
   
@@ -81,6 +81,11 @@
   <url>
     <loc>http://root-w.github.io/tags/development/</loc>
     <lastmod>2016-08-04T22:50:37+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://root-w.github.io/tags/docker/</loc>
     <priority>0</priority>
   </url>
   
@@ -138,18 +143,18 @@
   </url>
   
   <url>
-    <loc>http://root-w.github.io/tips/findcontainerbypid/</loc>
-  </url>
-  
-  <url>
     <loc>http://root-w.github.io/tags/%E6%95%88%E7%8E%87/</loc>
     <lastmod>2016-07-25T11:10:08+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://root-w.github.io/%E6%97%85%E8%A1%8C/</loc>
+    <loc>http://root-w.github.io/travel/</loc>
     <lastmod>2015-03-28T02:58:23+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://root-w.github.io/tips/findcontainerbypid/</loc>
   </url>
   
 </urlset>

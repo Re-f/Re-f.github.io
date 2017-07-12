@@ -1,0 +1,929 @@
+<!DOCTYPE html>
+<html lang="en" class="js csstransforms3d">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="generator" content="Hugo 0.25.1" />
+    <meta name="description" content="">
+
+
+    <title>MySQL调整参数:open_files_limit &amp; max_connections &amp; table_open_cache :: Root On The Way</title>
+    <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
+    <link href="/css/nucleus.css" rel="stylesheet">
+    <link href="/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/css/hybrid.css" rel="stylesheet">
+    <link href="/css/featherlight.min.css" rel="stylesheet">
+    <link href="/css/horsey.css" rel="stylesheet">
+    
+    <link href="/css/theme.css" rel="stylesheet">
+    
+    
+      <link href="/css/theme-blue.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <script src="/js/jquery-2.x.min.js"></script>
+    <style type="text/css">
+      :root #header + #content > #left > #rlblock_left {
+        display:none !important;
+      }
+    </style>
+
+    
+
+    <link rel="shortcut icon" href="me.icon" />
+   
+  
+  </head>
+  <body class="" data-url="/programmer/mysql_variables/">
+    <nav id="sidebar" class="showVisitedLinks">
+
+
+
+
+
+<div class="highlightable">
+  <div id="header-wrapper">
+    <div id="header">
+       
+	<p>早时不作业，晚时不作息</p>
+ 
+
+
+    </div>
+    
+        <div class="searchbox">
+    <label for="search-by"><i class="fa fa-search"></i></label>
+    <input data-search-input id="search-by" type="text" placeholder="Search...">
+    <span data-search-clear=""><i class="fa fa-close"></i></span>
+</div>
+<script type="text/javascript" src="/js/lunr.min.js"></script>
+<script type="text/javascript" src="/js/horsey.js"></script>
+<script type="text/javascript">
+    var baseurl = "http:\/\/root-w.github.io";
+</script>
+<script type="text/javascript" src="/js/search.js"></script>
+
+    
+  </div>
+
+  
+    <ul class="topics">
+        
+            <li data-nav-id="/" class="dd-item">
+            <a href="/"><i class="fa fa-fw fa-home"></i></a>
+            </li>
+        
+        
+        
+        
+
+
+ 
+  
+    <li data-nav-id="/programmer/" class="dd-item 
+        parent
+        
+        
+        ">
+      <a href="/programmer/">
+        <span><i class='fa-bars'></i> 博文</span>
+        
+          <i class="fa fa-angle-down fa-lg category-icon"></i>
+        
+        <i style="color:grey" class="fa fa-circle-thin read-icon"></i>
+      </a>
+      <ul>
+        
+        
+        
+        
+          
+          
+
+
+ 
+  
+    
+      <li data-nav-id="/programmer/mysql-sandbox/" class="dd-item
+     
+      ">
+        <a href="/programmer/mysql-sandbox/">
+        <span>mysqlsandbox 的安装与使用</span> 
+        <i style="color:grey" class="fa fa-circle-thin read-icon"></i>
+        </a></li>
+     
+  
+ 
+
+          
+        
+          
+          
+
+
+ 
+  
+    
+      <li data-nav-id="/programmer/put_up_dev_env/" class="dd-item
+     
+      ">
+        <a href="/programmer/put_up_dev_env/">
+        <span>利用 git hook 搭建自动编译部署测试环境</span> 
+        <i style="color:grey" class="fa fa-circle-thin read-icon"></i>
+        </a></li>
+     
+  
+ 
+
+          
+        
+          
+          
+
+
+ 
+  
+    
+      <li data-nav-id="/programmer/mysql_variables/" class="dd-item
+     active
+      ">
+        <a href="/programmer/mysql_variables/">
+        <span>MySQL调整参数:open_files_limit &amp; max_connections &amp; table_open_cache</span> 
+        <i style="color:grey" class="fa fa-circle-thin read-icon"></i>
+        </a></li>
+     
+  
+ 
+
+          
+        
+      </ul>
+    </li>
+  
+ 
+
+        
+        
+
+
+ 
+  
+    <li data-nav-id="/reading/" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/reading/">
+        <span><i class='book'></i> 读书</span>
+        
+          <i class="fa fa-angle-right fa-lg category-icon"></i>
+        
+        <i style="color:grey" class="fa fa-circle-thin read-icon"></i>
+      </a>
+      <ul>
+        
+        
+        
+        
+          
+          
+
+
+ 
+  
+    
+      <li data-nav-id="reading/qyuhenGo" class="dd-item
+     
+      ">
+        <a href="/reading/qyuhengo/">
+        <span>go 语言学习笔记</span> 
+        <i style="color:grey" class="fa fa-circle-thin read-icon"></i>
+        </a></li>
+     
+  
+ 
+
+          
+        
+          
+          
+
+
+ 
+  
+    
+      <li data-nav-id="reading/practices-of-agile-devepler" class="dd-item
+     
+      ">
+        <a href="/reading/practices-of-agile-devepler/">
+        <span>高效程序员的45个习惯</span> 
+        <i style="color:grey" class="fa fa-circle-thin read-icon"></i>
+        </a></li>
+     
+  
+ 
+
+          
+        
+          
+          
+
+
+ 
+  
+    
+      <li data-nav-id="reading/Hexi-Corridor" class="dd-item
+     
+      ">
+        <a href="/reading/hexi-corridor/">
+        <span>《河西走廊》观后感</span> 
+        <i style="color:grey" class="fa fa-circle-thin read-icon"></i>
+        </a></li>
+     
+  
+ 
+
+          
+        
+      </ul>
+    </li>
+  
+ 
+
+        
+        
+
+
+ 
+  
+    <li data-nav-id="/tips/" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/tips/">
+        <span>Tips</span>
+        
+          <i class="fa fa-angle-right fa-lg category-icon"></i>
+        
+        <i style="color:grey" class="fa fa-circle-thin read-icon"></i>
+      </a>
+      <ul>
+        
+        
+        
+        
+          
+          
+
+
+ 
+  
+    
+      <li data-nav-id="/tips/findcontainerbypid/" class="dd-item
+     
+      ">
+        <a href="/tips/findcontainerbypid/">
+        <span>通过 pid 查找docker容器</span> 
+        <i style="color:grey" class="fa fa-circle-thin read-icon"></i>
+        </a></li>
+     
+  
+ 
+
+          
+        
+      </ul>
+    </li>
+  
+ 
+
+        
+        
+
+
+ 
+  
+    <li data-nav-id="/travel/" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/travel/">
+        <span><i class='space shuttle'></i> 旅行</span>
+        
+          <i class="fa fa-angle-right fa-lg category-icon"></i>
+        
+        <i style="color:grey" class="fa fa-circle-thin read-icon"></i>
+      </a>
+      <ul>
+        
+        
+        
+        
+          
+          
+
+
+ 
+  
+    
+      <li data-nav-id="travel-to-mount-putuo" class="dd-item
+     
+      ">
+        <a href="/travel-to-mount-putuo/">
+        <span>普陀行</span> 
+        <i style="color:grey" class="fa fa-circle-thin read-icon"></i>
+        </a></li>
+     
+  
+ 
+
+          
+        
+      </ul>
+    </li>
+  
+ 
+
+        
+
+        
+        <section id="shortcuts">
+            
+                <li class="" role="">
+                    <h3>More</h3>
+                    <a href="https://github.com/root-w"><i class='fa fa-github'></i> Github repo</a>
+                    
+                </li>
+            
+                <li class="" role="">
+                    
+                    <a href="/me"><i class='fa fa-user'></i>  关于我</a>
+                    
+                </li>
+            
+        </section>    
+        
+        
+            <a class="" href="#" data-clear-history-toggle=""><i class="fa  fa-history"></i> Clear History</a>
+        
+
+        
+    </ul>
+    
+     
+    <section id="footer">
+      
+    </section>
+  </div>
+</nav>
+
+
+
+        <section id="body">
+        <div id="overlay"></div>
+        <div class="padding highlightable">
+        
+          <div id="top-bar">
+            
+
+            <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                <span id="sidebar-toggle-span">
+                  <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                    <i class="fa fa-bars"></i>
+                  </a>
+                </span>
+                <span id="toc-menu"><i class="fa fa-list-alt"></i></span>
+                <span class="links">
+                
+
+
+
+
+
+
+
+ <a href='/'>关于我</a> > <a href='/programmer/'>博文</a> > MySQL调整参数:open_files_limit & max_connections & table_open_cache
+
+ 
+
+ 
+
+   
+                </span>
+            </div>
+            <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#起因">起因</a>
+<ul>
+<li><a href="#说明">说明</a></li>
+</ul></li>
+<li><a href="#mysql调整参数的方式">MySQL调整参数的方式</a>
+<ul>
+<li><a href="#计算-request-open-files">计算<code>request_open_files</code></a></li>
+<li><a href="#计算-effective-open-files">计算<code>effective_open_files</code>:</a></li>
+<li><a href="#修正request-open-files">修正request_open_files</a></li>
+<li><a href="#重新计算参数值">重新计算参数值</a></li>
+<li><a href="#修正open-files-limit">修正open_files_limit</a></li>
+<li><a href="#修正max-connections">修正max_connections</a></li>
+<li><a href="#修正table-cache-size">修正table_cache_size</a></li>
+</ul></li>
+<li><a href="#举例">举例</a></li>
+<li><a href="#其它">其它</a></li>
+<li><a href="#附注">附注</a></li>
+</ul></li>
+</ul>
+</nav>
+    </div>
+</div>
+
+          </div>
+        
+        
+          <div id="tags">
+            
+              <a class="label label-default" href="http://root-w.github.io/tags/development">development</a>
+            
+              <a class="label label-default" href="http://root-w.github.io/tags/mysql">mysql</a>
+            
+          </div>
+        
+        <div id="body-inner">
+          
+            <h1>MySQL调整参数:open_files_limit &amp; max_connections &amp; table_open_cache</h1>
+          
+
+
+
+
+
+
+<h2 id="起因">起因</h2>
+
+<p>非root用户运行MySQL，当MySQL配置比较高时，MySQL运行中生效的参数值与配置的值不一样,所以具体分析一下MySQL是怎么调整这些参数值的。
+所以这篇文章的目的是为了说明在系统资源不够的情况下，MySQL 是怎么调整者三个参数的</p>
+
+<h3 id="说明">说明</h3>
+
+<p>此文涉及到3个参数open_files_limit &amp; max_connections &amp; table_open_cache，这3个参数与系统相关的资源是最多能同时打开的文件（ulimit -n 查看）实际即文件描述符（fd）。</p>
+
+<p><strong>系统参数与文件描述符的关系</strong>
+- max_connection &amp; fd : 每一个MySQL connection都需要一个文件描述符
+- table_open_cache &amp;  fd 打开一张表至少需要一个文件描述符，如打开MyISAM需要两个fd</p>
+
+<h2 id="mysql调整参数的方式">MySQL调整参数的方式</h2>
+
+<ol>
+<li>根据配置(配置的3个参数值或默认值)计算<code>request_open_files(需要的文件描述符)</code></li>
+<li>获取有效的系统的限制值<code>effective_open_files</code></li>
+<li>根据<code>effective_open_files</code>调整<code>request_open_files</code></li>
+<li>根据调整后的<code>request_open_files</code>,计算实际生效的参数值(show variables 查看到的3个参数值)</li>
+</ol>
+
+<h3 id="计算-request-open-files">计算<code>request_open_files</code></h3>
+
+<p><code>request_open_files</code>有三个计算公式</p>
+
+<pre><code>    // 最大连接数+同时打开的表的最大数量+其他（各种日志等等）
+      limit_1= max_connections + table_cache_size * 2 + 10;
+    
+     //假设平均每个连接打开的表的数量（2-4）
+     //源码中是这么写的：
+     //We are trying to allocate no less than  
+     //	max_connections*5 file handles 
+      limit_2= max_connections * 5;
+    
+      //mysql 默认的最低值是5000
+      limit_3= open_files_limit ? open_files_limit : 5000;
+
+所以open_files_limit期待的最低 
+    request_open_files= max(limit_1, limit_2,limit_3);
+</code></pre>
+
+<h3 id="计算-effective-open-files">计算<code>effective_open_files</code>:</h3>
+
+<p>MySQL 的思路：
+在<strong>有限值</strong>的的范围内MySQL <strong>尽量</strong>将<code>effective_open_files</code>的值设大</p>
+
+<p><img src="media/2.png" alt="ddd" /></p>
+
+<h3 id="修正request-open-files">修正request_open_files</h3>
+
+<p><code>requested_open_files</code>= min(<code>effective_open_files</code>, <code>request_open_files</code>);</p>
+
+<h3 id="重新计算参数值">重新计算参数值</h3>
+
+<h3 id="修正open-files-limit">修正open_files_limit</h3>
+
+<p><code>open_files_limit</code> = <code>effective_open_files</code></p>
+
+<h3 id="修正max-connections">修正max_connections</h3>
+
+<p>max_connections 根据 request_open_files 来做修正。</p>
+
+<pre><code>limit = requested_open_files - 10 - TABLE_OPEN_CACHE_MIN * 2;
+</code></pre>
+
+<ul>
+<li>如果配置的max_connections值大于limit，则将 max_connections 的值修正为limit</li>
+<li>其他情况下 max_connections 保留配置值<br />
+<br /></li>
+</ul>
+
+<h3 id="修正table-cache-size">修正table_cache_size</h3>
+
+<p>table_cache_size 会根据 request_open_files 来做修正</p>
+
+<pre><code>// mysql table_cache_size 最小值，400
+limit1 = TABLE_OPEN_CACHE_MIN 
+// 根据 requested_open_files 计算
+limit2 = (requested_open_files - 10 - max_connections) / 2
+limit = max(limit1,limt2);
+</code></pre>
+
+<ul>
+<li>如果配置的 table_cache_size 值大于limit，则将 table_cache_size 的值修正为limit</li>
+<li>其他情况下 table_cache_size 保留配置值</li>
+</ul>
+
+<h2 id="举例">举例</h2>
+
+<p><strong>以下用例全部在非 root 用户下运行</strong></p>
+
+<hr />
+
+<ul>
+<li>系统资源不够且无法调整
+```
+参数设置：</li>
+</ul>
+
+<p>//mysql
+	max_connections = 1000
+//ulimit -n
+	1024</p>
+
+<p>生效的值：</p>
+
+<p>open_files_limit = 1024
+max_connections = 1024 - 10 - 800 = 214
+table_open_cache = ( 1024 - 10 - 214) / 2 = 400</p>
+
+<pre><code>
+---
+- 系统资源不够可以调整
+</code></pre>
+
+<p>参数设置：</p>
+
+<p>//mysql
+	max_connections = 1000
+//ulimit -S -n
+	1000
+//ulimit -H -n
+	65535</p>
+
+<p>生效的值：</p>
+
+<p>open_files_limit = 65535
+max_connections = 1000
+table_open_cache = ( 1024 - 10 - 214) / 2 = 400</p>
+
+<pre><code>
+---
+mysql 修改 open_files_limit
+</code></pre>
+
+<p>参数设置：</p>
+
+<p>//mysql
+	max_connections = 1000
+	max_connections = 1000
+//ulimit -n
+	65535</p>
+
+<p>生效的值：</p>
+
+<p>open_files_limit = 65535
+max_connections = 1000
+table_open_cache = 2000
+```</p>
+
+<h2 id="其它">其它</h2>
+
+<p>淘宝数据库内核月报中说道的相关内容：</p>
+
+<p><a href="http://mysql.taobao.org//monthly/2015/08/07/">MySQL · 答疑解惑 · open file limits</a>
+这篇主要讲的是，MySQL 在执行哪些操作时会执行打开文件的操作</p>
+
+<h2 id="附注">附注</h2>
+
+<p><a href="http://www.sudops.com/mysql-open-file-limit-max_connections-table-open-cache.htmlz">1</a> . 非root用户，只能设置Hard limit之内的值，root用户可以设置hard limit的值
+[2] .<a href="http://www.sudops.com/mysql-open-file-limit-max_connections-table-open-cache.htmlz">参考文章</a></p>
+
+
+<footer class=" footline" >
+	
+</footer>
+
+
+<div  id="container" align="center"></div>
+<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<script>
+const myTheme = {
+render(state, instance) {
+const container = document.createElement('div')
+container.lang = "zh-CN"
+container.className = 'gitment-container gitment-root-container'
+container.appendChild(instance.renderHeader(state, instance))
+container.appendChild(instance.renderEditor(state, instance))
+container.appendChild(instance.renderComments(state, instance))
+container.appendChild(instance.renderFooter(state, instance))
+return container
+},
+}
+var gitment = new Gitment({
+  owner: 'root-w',
+  repo: 'root-w.github.io',
+  oauth: {
+    client_id: '8533dbb2bc3fd81c2428',
+    client_secret: '3ec418634fd9e5bcb4fba9b92861c61b3aa807ee',
+  },
+  theme: myTheme,
+})
+
+gitment.render('container')
+</script>
+
+
+      </div>
+    </div>
+
+    
+ 
+    
+
+    <div id="navigation">
+        
+        
+        
+        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+        
+        
+
+
+        
+            <a class="nav nav-prev" href="/programmer/put_up_dev_env/" title="利用 git hook 搭建自动编译部署测试环境"> <i class="fa fa-chevron-left"></i></a>
+        
+        
+            <a class="nav nav-next" href="/reading/" title="读书" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+        
+    </div>
+
+    </section>
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="/js/clipboard.min.js"></script>
+    <script src="/js/featherlight.min.js"></script>
+    <script src="/js/html5shiv-printshiv.min.js"></script>
+    <script src="/js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="/js/modernizr.custom.71422.js"></script>
+    <script src="/js/learn.js"></script>
+    <script src="/js/hugo-learn.js"></script>
+
+    
+    <link href="/mermaid/mermaid.css" type="text/css" rel="stylesheet"/>
+    <script src="/mermaid/mermaid.js"></script>
+    <script>mermaid.initialize({startOnLoad:true});</script>
+    
+
+    
+
+  </body>
+</html>
+

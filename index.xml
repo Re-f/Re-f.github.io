@@ -23,64 +23,64 @@
     
     <item>
       <title>go 语言学习笔记</title>
-      <link>http://root-w.github.io/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/go-%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</link>
+      <link>http://root-w.github.io/reading/qyuhengo/</link>
       <pubDate>Thu, 04 Aug 2016 22:50:37 +0800</pubDate>
       
-      <guid>http://root-w.github.io/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/go-%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</guid>
+      <guid>http://root-w.github.io/reading/qyuhengo/</guid>
       <description>14章-15章 go 在初始化的过程中做了些什么，包括内存的初始化，gc 初始化，已经 main 函数和各个包 init 的初始化 16章 内存分配 go 自主管理内存分配，有个</description>
     </item>
     
     <item>
       <title>mysqlsandbox 的安装与使用</title>
-      <link>http://root-w.github.io/%E7%A8%8B%E5%BA%8F%E7%8C%BF/mysql-sandbox/</link>
+      <link>http://root-w.github.io/programmer/mysql-sandbox/</link>
       <pubDate>Mon, 25 Jul 2016 11:10:08 +0800</pubDate>
       
-      <guid>http://root-w.github.io/%E7%A8%8B%E5%BA%8F%E7%8C%BF/mysql-sandbox/</guid>
+      <guid>http://root-w.github.io/programmer/mysql-sandbox/</guid>
       <description>说明 官网：http://mysqlsandbox.net/ 用途： 安装 方便快捷迅速的在一台机器上搭建 mysql 实例，包括：单个 mysql 实例，主从复制的 mysql 实例</description>
     </item>
     
     <item>
       <title>高效程序员的45个习惯</title>
-      <link>http://root-w.github.io/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E9%AB%98%E6%95%88%E7%A8%8B%E5%BA%8F%E5%91%98%E7%9A%8445%E4%B8%AA%E4%B9%A0%E6%83%AF/</link>
+      <link>http://root-w.github.io/reading/practices-of-agile-devepler/</link>
       <pubDate>Sat, 09 Apr 2016 14:36:48 +0800</pubDate>
       
-      <guid>http://root-w.github.io/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E9%AB%98%E6%95%88%E7%A8%8B%E5%BA%8F%E5%91%98%E7%9A%8445%E4%B8%AA%E4%B9%A0%E6%83%AF/</guid>
+      <guid>http://root-w.github.io/reading/practices-of-agile-devepler/</guid>
       <description>思维导图: 相关文件 高效程序员的45个习惯.itmz (127 ko)</description>
     </item>
     
     <item>
       <title>利用 git hook 搭建自动编译部署测试环境</title>
-      <link>http://root-w.github.io/%E7%A8%8B%E5%BA%8F%E7%8C%BF/put_up_dev_env/</link>
+      <link>http://root-w.github.io/programmer/put_up_dev_env/</link>
       <pubDate>Sun, 16 Aug 2015 23:04:24 +0800</pubDate>
       
-      <guid>http://root-w.github.io/%E7%A8%8B%E5%BA%8F%E7%8C%BF/put_up_dev_env/</guid>
+      <guid>http://root-w.github.io/programmer/put_up_dev_env/</guid>
       <description>说明： 利用 docker，git 搭建自动编译部署测试环境 步骤： 1. 在 dev_server上 搭建测试环境 2. 创建在 ci_server代码远端仓库 test_repo 3.</description>
     </item>
     
     <item>
       <title>MySQL调整参数:open_files_limit &amp; max_connections &amp; table_open_cache</title>
-      <link>http://root-w.github.io/%E7%A8%8B%E5%BA%8F%E7%8C%BF/mysql_variables/</link>
+      <link>http://root-w.github.io/programmer/mysql_variables/</link>
       <pubDate>Sat, 06 Jun 2015 11:10:08 +0800</pubDate>
       
-      <guid>http://root-w.github.io/%E7%A8%8B%E5%BA%8F%E7%8C%BF/mysql_variables/</guid>
+      <guid>http://root-w.github.io/programmer/mysql_variables/</guid>
       <description>起因 非root用户运行MySQL，当MySQL配置比较高时，MySQL运行中生效的参数值与配置的值不一样,所以具体分析一下MySQL是怎么调</description>
     </item>
     
     <item>
       <title>《河西走廊》观后感</title>
-      <link>http://root-w.github.io/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E6%B2%B3%E8%A5%BF%E8%B5%B0%E5%BB%8A%E8%A7%82%E5%90%8E%E6%84%9F/</link>
+      <link>http://root-w.github.io/reading/hexi-corridor/</link>
       <pubDate>Tue, 12 May 2015 21:35:47 +0800</pubDate>
       
-      <guid>http://root-w.github.io/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E6%B2%B3%E8%A5%BF%E8%B5%B0%E5%BB%8A%E8%A7%82%E5%90%8E%E6%84%9F/</guid>
+      <guid>http://root-w.github.io/reading/hexi-corridor/</guid>
       <description>整个纪录片是以时间线来讲述河西走廊的方方面面的，一集一个主题，每集的时间跨度大概是1-2个朝代，涵盖内容包括河西走廊的开辟，兴起，政治，军事</description>
     </item>
     
     <item>
       <title>普陀行</title>
-      <link>http://root-w.github.io/%E6%97%85%E8%A1%8C/%E6%99%AE%E9%99%80%E8%A1%8C/</link>
+      <link>http://root-w.github.io/travel-to-mount-putuo/</link>
       <pubDate>Sat, 28 Mar 2015 02:58:23 +0800</pubDate>
       
-      <guid>http://root-w.github.io/%E6%97%85%E8%A1%8C/%E6%99%AE%E9%99%80%E8%A1%8C/</guid>
+      <guid>http://root-w.github.io/travel-to-mount-putuo/</guid>
       <description>普陀山之行 前 大家如果需要上香的话可以在上岛前买好，在普陀山买香最便宜的是99，之后的差不多就是299，699了，我一直相信心诚则灵，所以在哪</description>
     </item>
     
@@ -94,7 +94,7 @@
     </item>
     
     <item>
-      <title>finding container by process id</title>
+      <title>通过 pid 查找docker容器</title>
       <link>http://root-w.github.io/tips/findcontainerbypid/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
