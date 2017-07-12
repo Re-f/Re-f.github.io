@@ -74,7 +74,7 @@
 	"title": "关于我",
 	"tags": [],
 	"description": "关于我",
-	"content": " Hello World!  博文  \n  mysqlsandbox 的安装与使用  说明 官网：http://mysqlsandbox.net/ 用途： 安装 方便快捷迅速的在一台机器上搭建 mysql 实例，包括：单个 mysql 实例，主从复制的 mysql 实例\n   利用 git hook 搭建自动编译部署测试环境  说明： 利用 docker，git 搭建自动编译部署测试环境 步骤： 1. 在 dev_server上 搭建测试环境 2. 创建在 ci_server代码远端仓库 test_repo 3.\n   MySQL调整参数:open_files_limit \u0026amp; max_connections \u0026amp; table_open_cache  起因 非root用户运行MySQL，当MySQL配置比较高时，MySQL运行中生效的参数值与配置的值不一样,所以具体分析一下MySQL是怎么调\n    读书  \n  go 语言学习笔记  要么旅行，要么读书，身体和思想，必须有一个在路上\n   高效程序员的45个习惯  要么旅行，要么读书，身体和思想，必须有一个在路上\n   《河西走廊》观后感  要么旅行，要么读书，身体和思想，必须有一个在路上\n    旅行  \n  普陀行  Hello world!\n    "
+	"content": " Hello World!  博文  \n  mysqlsandbox 的安装与使用  说明 官网：http://mysqlsandbox.net/ 用途： 安装 方便快捷迅速的在一台机器上搭建 mysql 实例，包括：单个 mysql 实例，主从复制的 mysql 实例\n   利用 git hook 搭建自动编译部署测试环境  说明： 利用 docker，git 搭建自动编译部署测试环境 步骤： 1. 在 dev_server上 搭建测试环境 2. 创建在 ci_server代码远端仓库 test_repo 3.\n   MySQL调整参数:open_files_limit \u0026amp; max_connections \u0026amp; table_open_cache  起因 非root用户运行MySQL，当MySQL配置比较高时，MySQL运行中生效的参数值与配置的值不一样,所以具体分析一下MySQL是怎么调\n    读书  \n  go 语言学习笔记  要么旅行，要么读书，身体和思想，必须有一个在路上\n   高效程序员的45个习惯  要么旅行，要么读书，身体和思想，必须有一个在路上\n   《河西走廊》观后感  要么旅行，要么读书，身体和思想，必须有一个在路上\n    Tips  \n  finding container by process id  原理： 通过 docker ps找到所有的 container，然后对所有的 container 逐个执行 docker top，通过对比给定的 pid 找到对应的 container\n    旅行  \n  普陀行  Hello world!\n    "
 },
 {
 	"uri": "http://root-w.github.io/me/",
@@ -82,6 +82,13 @@
 	"tags": [],
 	"description": "关于我",
 	"content": "一个在魔都工作的女程序员，懒了24年终于在本命决定开始努力！\n"
+},
+{
+	"uri": "http://root-w.github.io/tags/bash/",
+	"title": "Bash",
+	"tags": [],
+	"description": "",
+	"content": ""
 },
 {
 	"uri": "http://root-w.github.io/tags/broaden-horizons/",
@@ -154,11 +161,25 @@
 	"content": ""
 },
 {
+	"uri": "http://root-w.github.io/tips/",
+	"title": "Tips",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
 	"uri": "http://root-w.github.io/tags/travel/",
 	"title": "Travel",
 	"tags": [],
 	"description": "",
 	"content": ""
+},
+{
+	"uri": "http://root-w.github.io/tips/findcontainerbypid/",
+	"title": "finding container by process id",
+	"tags": ["bash"],
+	"description": "",
+	"content": "原理：\n通过 docker ps找到所有的 container，然后对所有的 container 逐个执行 docker top，通过对比给定的 pid 找到对应的 container \n"
 },
 {
 	"uri": "http://root-w.github.io/tags/%E6%95%88%E7%8E%87/",

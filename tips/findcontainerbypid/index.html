@@ -7,7 +7,7 @@
     <meta name="description" content="">
 
 
-    <title>Travel :: Root On The Way</title>
+    <title>finding container by process id :: Root On The Way</title>
     <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
     <link href="/css/nucleus.css" rel="stylesheet">
     <link href="/css/font-awesome.min.css" rel="stylesheet">
@@ -34,7 +34,7 @@
    
   
   </head>
-  <body class="" data-url="/tags/travel/">
+  <body class="" data-url="/tips/findcontainerbypid/">
     <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -257,14 +257,14 @@
  
   
     <li data-nav-id="/tips/" class="dd-item 
+        parent
         
-        active
         
         ">
       <a href="/tips/">
         <span>Tips</span>
         
-          <i class="fa fa-angle-right fa-lg category-icon"></i>
+          <i class="fa fa-angle-down fa-lg category-icon"></i>
         
         <i style="color:grey" class="fa fa-circle-thin read-icon"></i>
       </a>
@@ -281,7 +281,7 @@
   
     
       <li data-nav-id="/tips/findcontainerbypid/" class="dd-item
-     
+     active
       ">
         <a href="/tips/findcontainerbypid/">
         <span>finding container by process id</span> 
@@ -398,7 +398,17 @@
                 <span class="links">
                 
 
- Travel
+
+
+
+
+
+
+ <a href='/'>关于我</a> > <a href='/tips/'>Tips</a> > finding container by process id
+
+ 
+
+ 
 
    
                 </span>
@@ -412,70 +422,28 @@
           </div>
         
         
+          <div id="tags">
+            
+              <a class="label label-default" href="http://root-w.github.io/tags/bash">bash</a>
+            
+          </div>
+        
         <div id="body-inner">
           
-            <h1>Travel</h1>
+            <h1>finding container by process id</h1>
           
 
 
 
 
+<p>原理：<br />
+通过 <code>docker ps</code>找到所有的 container，然后对所有的 container 逐个执行 <code>docker top</code>，通过对比给定的 pid 找到对应的 container
+<script src="https://gist.github.com/root-w/5f848b07370453baa58caa5b7baf961d.js"></script></p>
 
 
 <footer class=" footline" >
 	
 </footer>
-
-
-
-	
-
-	<div class="extra-pagination inner">
-	<nav class="pagination" role="navigation">
-	
-	<span class="page-number">Page 1 on 1</span>
-	
-</nav>
-
-	</div>
-
-	
-	   <article class="post 旅行">
-    <header class="post-header">
-        <h2 class="post-title"><a href="/%E6%97%85%E8%A1%8C/%E6%99%AE%E9%99%80%E8%A1%8C/">普陀行</a></h2>
-    </header>
-    <section class="post-excerpt">
-        <p>普陀山之行 前 大家如果需要上香的话可以在上岛前买好，在普陀山买香最便宜的是99，之后的差不多就是299，699了，我一直相信心诚则灵，所以在哪 <a class="read-more" href="/%E6%97%85%E8%A1%8C/%E6%99%AE%E9%99%80%E8%A1%8C/">&raquo;</a></p>
-    </section>
-    <footer class=" footline" >
-         
-        
-
-        
-          
-            
-                <a class="label label-default" href="http://root-w.github.iotags/broaden-horizons/">Broaden horizons</a>
-            
-                <a class="label label-default" href="http://root-w.github.iotags/travel/">travel</a>
-            
-        
-
-    </footer>
-</article>
-
-
-
-
-	
-
-	<div style="margin-bottom:2rem"></div>
-
-	<nav class="pagination" role="navigation">
-	
-	<span class="page-number">Page 1 on 1</span>
-	
-</nav>
-
 
 
 
@@ -642,6 +610,43 @@
             
                 
                     
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
                 
                 
 
@@ -669,38 +674,6 @@
             
         
                     
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
             
         
         
@@ -708,8 +681,10 @@
 
 
         
+            <a class="nav nav-prev" href="/tips/" title="Tips"> <i class="fa fa-chevron-left"></i></a>
         
-            <a class="nav nav-next" href="/%E7%A8%8B%E5%BA%8F%E7%8C%BF/" title="博文" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+        
+            <a class="nav nav-next" href="/%E6%97%85%E8%A1%8C/" title="旅行" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
         
     </div>
 
@@ -775,3 +750,4 @@ gitment.render('container')
 
   </body>
 </html>
+
