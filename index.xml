@@ -2,104 +2,113 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>关于我 on Root On The Way</title>
-    <link>http://root-w.github.io/</link>
+    <link>http://Ref.github.io/</link>
     <description>Recent content in 关于我 on Root On The Way</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <copyright>Copyright (c) 2008 - 2015, Root Zhou; all rights reserved.</copyright>
     <lastBuildDate>Sun, 25 Jan 2015 19:13:59 +0800</lastBuildDate>
     
-	<atom:link href="http://root-w.github.io/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://Ref.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>header</title>
-      <link>http://root-w.github.io/_header/</link>
+      <link>http://Ref.github.io/_header/</link>
       <pubDate>Mon, 24 Apr 2017 18:36:24 +0200</pubDate>
       
-      <guid>http://root-w.github.io/_header/</guid>
+      <guid>http://Ref.github.io/_header/</guid>
       <description>早时不作业，晚时不作息</description>
     </item>
     
     <item>
       <title>go 语言学习笔记</title>
-      <link>http://root-w.github.io/reading/qyuhengo/</link>
+      <link>http://Ref.github.io/reading/qyuhengo/</link>
       <pubDate>Thu, 04 Aug 2016 22:50:37 +0800</pubDate>
       
-      <guid>http://root-w.github.io/reading/qyuhengo/</guid>
+      <guid>http://Ref.github.io/reading/qyuhengo/</guid>
       <description>14章-15章 go 在初始化的过程中做了些什么，包括内存的初始化，gc 初始化，已经 main 函数和各个包 init 的初始化 16章 内存分配 go 自主管理内存分配，有个</description>
     </item>
     
     <item>
       <title>mysqlsandbox 的安装与使用</title>
-      <link>http://root-w.github.io/programmer/mysql-sandbox/</link>
+      <link>http://Ref.github.io/mysql-sandbox-usage/</link>
       <pubDate>Mon, 25 Jul 2016 11:10:08 +0800</pubDate>
       
-      <guid>http://root-w.github.io/programmer/mysql-sandbox/</guid>
+      <guid>http://Ref.github.io/mysql-sandbox-usage/</guid>
       <description>说明 官网：http://mysqlsandbox.net/ 用途： 安装 方便快捷迅速的在一台机器上搭建 mysql 实例，包括：单个 mysql 实例，主从复制的 mysql 实例</description>
     </item>
     
     <item>
       <title>高效程序员的45个习惯</title>
-      <link>http://root-w.github.io/reading/practices-of-agile-devepler/</link>
+      <link>http://Ref.github.io/reading/practices-of-agile-devepler/</link>
       <pubDate>Sat, 09 Apr 2016 14:36:48 +0800</pubDate>
       
-      <guid>http://root-w.github.io/reading/practices-of-agile-devepler/</guid>
+      <guid>http://Ref.github.io/reading/practices-of-agile-devepler/</guid>
       <description>思维导图: 相关文件 高效程序员的45个习惯.itmz (127 ko)</description>
     </item>
     
     <item>
       <title>利用 git hook 搭建自动编译部署测试环境</title>
-      <link>http://root-w.github.io/programmer/put_up_dev_env/</link>
+      <link>http://Ref.github.io/programmer/put_up_dev_env/</link>
       <pubDate>Sun, 16 Aug 2015 23:04:24 +0800</pubDate>
       
-      <guid>http://root-w.github.io/programmer/put_up_dev_env/</guid>
-      <description>说明： 利用 docker，git 搭建自动编译部署测试环境 步骤： 1. 在 dev_server上 搭建测试环境 2. 创建在 ci_server代码远端仓库 test_repo 3.</description>
+      <guid>http://Ref.github.io/programmer/put_up_dev_env/</guid>
+      <description>说明： 利用 docker，git 搭建自动编译部署测试环境，每次 commit 后，能在测试服务器上自动编译并部署部署 步骤： 在 ci_agent上搭建测试环境 在</description>
     </item>
     
     <item>
       <title>MySQL调整参数:open_files_limit &amp; max_connections &amp; table_open_cache</title>
-      <link>http://root-w.github.io/programmer/mysql_variables/</link>
+      <link>http://Ref.github.io/programmer/mysql_variables/</link>
       <pubDate>Sat, 06 Jun 2015 11:10:08 +0800</pubDate>
       
-      <guid>http://root-w.github.io/programmer/mysql_variables/</guid>
+      <guid>http://Ref.github.io/programmer/mysql_variables/</guid>
       <description>起因 非root用户运行MySQL，当MySQL配置比较高时，MySQL运行中生效的参数值与配置的值不一样,所以具体分析一下MySQL是怎么调</description>
     </item>
     
     <item>
       <title>《河西走廊》观后感</title>
-      <link>http://root-w.github.io/reading/hexi-corridor/</link>
+      <link>http://Ref.github.io/reading/hexi-corridor/</link>
       <pubDate>Tue, 12 May 2015 21:35:47 +0800</pubDate>
       
-      <guid>http://root-w.github.io/reading/hexi-corridor/</guid>
+      <guid>http://Ref.github.io/reading/hexi-corridor/</guid>
       <description>整个纪录片是以时间线来讲述河西走廊的方方面面的，一集一个主题，每集的时间跨度大概是1-2个朝代，涵盖内容包括河西走廊的开辟，兴起，政治，军事</description>
     </item>
     
     <item>
       <title>普陀行</title>
-      <link>http://root-w.github.io/travel-to-mount-putuo/</link>
+      <link>http://Ref.github.io/travel-to-mount-putuo/</link>
       <pubDate>Sat, 28 Mar 2015 02:58:23 +0800</pubDate>
       
-      <guid>http://root-w.github.io/travel-to-mount-putuo/</guid>
+      <guid>http://Ref.github.io/travel-to-mount-putuo/</guid>
       <description>普陀山之行 前 大家如果需要上香的话可以在上岛前买好，在普陀山买香最便宜的是99，之后的差不多就是299，699了，我一直相信心诚则灵，所以在哪</description>
     </item>
     
     <item>
       <title>关于我</title>
-      <link>http://root-w.github.io/me/</link>
+      <link>http://Ref.github.io/me/</link>
       <pubDate>Sun, 25 Jan 2015 19:13:59 +0800</pubDate>
       
-      <guid>http://root-w.github.io/me/</guid>
-      <description>一个在魔都工作的女程序员，懒了24年终于在本命决定开始努力！</description>
+      <guid>http://Ref.github.io/me/</guid>
+      <description>一个在魔都工作的女程序员，看看书，写写博客，出去走走，生活大概就这样了</description>
+    </item>
+    
+    <item>
+      <title>git 项目 label 规范</title>
+      <link>http://Ref.github.io/programmer/git-labels/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://Ref.github.io/programmer/git-labels/</guid>
+      <description>列表 状态 Status/WIP(Work In progress) Status/Block 等待其他issue完成才能继续进行 Status/More detail 需要更详细的信息 Status/Verified 开发已经完成，QA已经测试并验证结果 Status/Invalid 无效的issue Status/Duplicate 重复的iss</description>
     </item>
     
     <item>
       <title>通过 pid 查找docker容器</title>
-      <link>http://root-w.github.io/tips/findcontainerbypid/</link>
+      <link>http://Ref.github.io/programmer/findcontainerbypid/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://root-w.github.io/tips/findcontainerbypid/</guid>
-      <description>原理： 通过 docker ps找到所有的 container，然后对所有的 container 逐个执行 docker top，通过对比给定的 pid 找到对应的 container</description>
+      <guid>http://Ref.github.io/programmer/findcontainerbypid/</guid>
+      <description>原理：通过 docker ps找到所有的 container，然后对所有的 container 逐个执行 docker top，通过对比给定的 pid 找到对应的 container</description>
     </item>
     
   </channel>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="js csstransforms3d">
+<html lang="cn" class="js csstransforms3d">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -53,13 +53,13 @@
     
         <div class="searchbox">
     <label for="search-by"><i class="fa fa-search"></i></label>
-    <input data-search-input id="search-by" type="text" placeholder="Search...">
+    <input data-search-input id="search-by" type="text" placeholder="">
     <span data-search-clear=""><i class="fa fa-close"></i></span>
 </div>
 <script type="text/javascript" src="/js/lunr.min.js"></script>
 <script type="text/javascript" src="/js/horsey.js"></script>
 <script type="text/javascript">
-    var baseurl = "http:\/\/root-w.github.io";
+    var baseurl = "http:\/\/Ref.github.io";
 </script>
 <script type="text/javascript" src="/js/search.js"></script>
 
@@ -104,10 +104,10 @@
  
   
     
-      <li data-nav-id="/programmer/mysql-sandbox/" class="dd-item
+      <li data-nav-id="mysql-sandbox-usage" class="dd-item
      
       ">
-        <a href="/programmer/mysql-sandbox/">
+        <a href="/mysql-sandbox-usage/">
         <span>mysqlsandbox 的安装与使用</span> 
         <i style="color:grey" class="fa fa-circle-thin read-icon"></i>
         </a></li>
@@ -149,6 +149,46 @@
       ">
         <a href="/programmer/mysql_variables/">
         <span>MySQL调整参数:open_files_limit &amp; max_connections &amp; table_open_cache</span> 
+        <i style="color:grey" class="fa fa-circle-thin read-icon"></i>
+        </a></li>
+     
+  
+ 
+
+          
+        
+          
+          
+
+
+ 
+  
+    
+      <li data-nav-id="/programmer/git-labels/" class="dd-item
+     
+      ">
+        <a href="/programmer/git-labels/">
+        <span>git 项目 label 规范</span> 
+        <i style="color:grey" class="fa fa-circle-thin read-icon"></i>
+        </a></li>
+     
+  
+ 
+
+          
+        
+          
+          
+
+
+ 
+  
+    
+      <li data-nav-id="/programmer/findcontainerbypid/" class="dd-item
+     
+      ">
+        <a href="/programmer/findcontainerbypid/">
+        <span>通过 pid 查找docker容器</span> 
         <i style="color:grey" class="fa fa-circle-thin read-icon"></i>
         </a></li>
      
@@ -256,54 +296,6 @@
 
  
   
-    <li data-nav-id="/tips/" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/tips/">
-        <span>Tips</span>
-        
-          <i class="fa fa-angle-right fa-lg category-icon"></i>
-        
-        <i style="color:grey" class="fa fa-circle-thin read-icon"></i>
-      </a>
-      <ul>
-        
-        
-        
-        
-          
-          
-
-
- 
-  
-    
-      <li data-nav-id="/tips/findcontainerbypid/" class="dd-item
-     
-      ">
-        <a href="/tips/findcontainerbypid/">
-        <span>通过 pid 查找docker容器</span> 
-        <i style="color:grey" class="fa fa-circle-thin read-icon"></i>
-        </a></li>
-     
-  
- 
-
-          
-        
-      </ul>
-    </li>
-  
- 
-
-        
-        
-
-
- 
-  
     <li data-nav-id="/travel/" class="dd-item 
         
         
@@ -353,7 +345,7 @@
             
                 <li class="" role="">
                     <h3>More</h3>
-                    <a href="https://github.com/root-w"><i class='fa fa-github'></i> Github repo</a>
+                    <a href="https://github.com/Ref"><i class='fa fa-github'></i> Github repo</a>
                     
                 </li>
             
@@ -366,7 +358,7 @@
         </section>    
         
         
-            <a class="" href="#" data-clear-history-toggle=""><i class="fa  fa-history"></i> Clear History</a>
+            <a class="" href="#" data-clear-history-toggle=""><i class="fa  fa-history"></i> </a>
         
 
         
@@ -419,9 +411,9 @@
 <ul>
 <li>
 <ul>
-<li>
+<li><a href="#说明">说明：</a>
 <ul>
-<li><a href="#说明">说明：</a></li>
+<li><a href="#步骤"><strong>步骤：</strong></a></li>
 </ul></li>
 <li><a href="#步骤说明">步骤说明</a></li>
 <li><a href="#参考资料">参考资料</a></li>
@@ -436,13 +428,13 @@
         
           <div id="tags">
             
-              <a class="label label-default" href="http://root-w.github.io/tags/golang">golang</a>
+              <a class="label label-default" href="http://Ref.github.io/tags/golang">golang</a>
             
-              <a class="label label-default" href="http://root-w.github.io/tags/development">development</a>
+              <a class="label label-default" href="http://Ref.github.io/tags/development">development</a>
             
-              <a class="label label-default" href="http://root-w.github.io/tags/environment">environment</a>
+              <a class="label label-default" href="http://Ref.github.io/tags/environment">environment</a>
             
-              <a class="label label-default" href="http://root-w.github.io/tags/engineering">engineering</a>
+              <a class="label label-default" href="http://Ref.github.io/tags/engineering">engineering</a>
             
           </div>
         
@@ -456,57 +448,62 @@
 
 
 
-<h3 id="说明">说明：</h3>
+<h2 id="说明">说明：</h2>
 
-<p>利用 docker，git 搭建自动编译部署测试环境
-<strong>步骤：</strong>
-1. 在 <code>dev_server</code>上 搭建测试环境
-2. 创建在 <code>ci_server</code>代码远端仓库 <code>test_repo</code>
-3. 在远端仓库中添加 post-recieve hook
-3. 在开发机上本地仓库上新添加一个远程仓库指向的远端仓库</p>
+<p>利用 docker，git 搭建自动编译部署测试环境，每次 commit 后，能在测试服务器上自动编译并部署部署</p>
 
-<p><strong>说明：</strong>
-<code>dev_server</code>和 <code>ci_server</code>都是docker container</p>
+<h3 id="步骤"><strong>步骤：</strong></h3>
 
-<p><strong>使用说明：</strong>
-每次 commit 后
-1. 在测试服务器上自动编译
-2. 在测试服务器上自动部署</p>
+<ol>
+<li>在 <code>ci_agent</code>上搭建测试环境<br /></li>
+<li>在 <code>ci_server</code> 上创建代码远端仓库 <code>test_repo</code><br /></li>
+<li>在远端仓库中添加 post-recieve hook<br /></li>
+<li>在开发机上本地仓库上新添加一个远程仓库指向的远端仓库<br /></li>
+</ol>
+
+<p><strong>注意：</strong><br />
+<code>ci_agent</code>和 <code>ci_server</code>都是docker container</p>
 
 <h2 id="步骤说明">步骤说明</h2>
 
 <ol>
-<li>创建<code>dev_server</code>搭建测试环境：</li>
-<li>新建一个 container将程序能正常运行 的环境全部部署好，然后将该 container 保存为image，</li>
+<li><p>配置<code>ci_agent</code>测试环境：</p>
 
-<li><p>创建相关的 Dockfile
-创建 Dockfile 并不是一个必须的步骤，但是创建测试环境的 Dockfile，并保存，能让开发人员在换了测试服务器（非<code>dev_server</code>）后能快速的搭建测试环境而不需要重新搭建</p></li>
+<ul>
+<li>新建并配置一个 container，部署好程序能正常运行的环境，然后将该 container 保存为image，</li>
+<li>创建相关的 Dockfile
+创建 Dockfile 并不是一个必须的步骤，但是创建测试环境的 Dockfile，并保存，能让开发人员在换了测试服务器（非<code>ci_agent</code>）后能快速的搭建测试环境而不需要重新搭建</li>
+</ul></li>
 
-<li><p>新建一个<code>ci_server</code> container</p></li>
+<li><p>创建<code>ci_server</code> container</p>
 
-<li><p>新运行一个 container 名为<code>ci_server</code>，需要将<code>ci_server</code> 的端口22 映射到宿主机</p></li>
+<ul>
+<li>新运行一个 container 名为<code>ci_server</code>，需要将<code>ci_server</code> 的端口22 映射到宿主机</li>
+<li>安装运行ssh</li>
+<li>配置程序编译环境</li>
 
-<li><p>安装运行ssh</p></li>
-
-<li><p>配置好程序编译环境</p></li>
-
-<li><p>安装git</p>
+<li><p>配置repo</p>
 
 <ol>
 <li>创建远端仓库：在<code>test_repo</code>目录下执行 <code>git init --bare</code></li>
-<li>将开发机上的需要测试代码分支推到远端仓库后，在 <code>test_src</code>目录下执行<code>git clone $test_repo</code></li>
+
+<li><p>在开发环境代码仓库中添加一个远端仓库，并将项目的代码推送到test_repo</p></li>
+
+<li><p>在 <code>test_src</code>目录下执行<code>git clone $test_repo</code></p></li>
 </ol></li>
 
 <li><p>配置自动编译部署脚本，在远端仓库中添加 post-recieve hook，hook 包括3部分</p>
 
 <ol>
-<li>pull 刚刚提交的代码</li>
+<li>刚刚提交的代码 pull 到<code>test_src</code>目录</li>
 <li>编译</li>
-<li>部署测试环境
-<strong>注意：</strong>
-在 hook 中，GIT_DIR 的值被设置为<code>.</code>,因此在使用 git 命令前可以删除这个变量，或者将它设置为你需要的的值</li>
+<li>部署测试环境</li>
 </ol></li>
+</ul></li>
 </ol>
+
+<p><strong>注意：</strong>
+在 hook 中，GIT_DIR 的值被设置为<code>.</code>,因此在hook中的脚步使用 git 命令前需要删除这个变量，或者将它设置为你需要的的值</p>
 
 <h2 id="参考资料">参考资料</h2>
 
@@ -548,8 +545,8 @@ return container
 },
 }
 var gitment = new Gitment({
-  owner: 'root-w',
-  repo: 'root-w.github.io',
+  owner: 'Ref',
+  repo: 'Ref.github.io',
   oauth: {
     client_id: '8533dbb2bc3fd81c2428',
     client_secret: '3ec418634fd9e5bcb4fba9b92861c61b3aa807ee',
@@ -657,6 +654,38 @@ gitment.render('container')
             
         
                     
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
             
         
                     
@@ -756,38 +785,6 @@ gitment.render('container')
             
         
                     
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
             
         
         
@@ -795,7 +792,7 @@ gitment.render('container')
 
 
         
-            <a class="nav nav-prev" href="/programmer/mysql-sandbox/" title="mysqlsandbox 的安装与使用"> <i class="fa fa-chevron-left"></i></a>
+            <a class="nav nav-prev" href="mysql-sandbox-usage" title="mysqlsandbox 的安装与使用"> <i class="fa fa-chevron-left"></i></a>
         
         
             <a class="nav nav-next" href="/programmer/mysql_variables/" title="MySQL调整参数:open_files_limit &amp; max_connections &amp; table_open_cache" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
